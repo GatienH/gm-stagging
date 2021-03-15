@@ -1,42 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
-
 html, body {
   margin: 0;
-  padding: 0;
-  font-family: 'Cormorant Garamond', serif;
-  color: black;
 }
 
-.banner {
-  height: 100vh;
+body {
   display: flex;
-  margin: 0 10px;
   flex-direction: column;
+}
+
+#header {
+  background-color: rosybrown;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  cursor: default;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-@media(max-width: 576px) {
-  h1 {
-    font-size: 2.5rem;
+  .navbar {
+    background-color: yellow;
+    display: flex;
+    flex-grow: 1;
+    max-width: 992px;
+    justify-content: space-between;
   }
 
-  a:active {
-    text-decoration: underline;
-  }
+    .left-items {
+      background-color: tan;
+    }
+
+      .logo {
+        background-color: tomato;
+      }
+
+    .right-items {
+      background-color: teal;
+      display: flex;
+    }
+
+      .lg-toggle {
+        background-color: wheat;
+      }
+
+      .burger {
+        background-color: yellowgreen;
+      }
+
+#main-container {
+  background-color: sandybrown;
+  display: flex;
+  justify-content: center;
 }
+
+  .content {
+    background-color: royalblue;
+    flex-grow: 1;
+    max-width: 992px;
+    height: 500px;
+  }
+
+#footer {
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+}
+
+  .footer-content {
+    background-color: salmon;
+    flex-grow: 1;
+    max-width: 992px;
+  }
