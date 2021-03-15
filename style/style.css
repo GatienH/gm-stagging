@@ -5,8 +5,11 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  /* overflow-y: hidden; */
 }
+
+  .overflow-y-hiden {
+    overflow-y: hidden;
+  }
 
 #menu {
   background-color: rgba(55, 133, 89, 0.5);
@@ -19,13 +22,17 @@ body {
   align-items: center;
 }
 
-#menu-close {
-  /* background-color: sienna; */
-}
+  .hidden {
+    visibility: hidden;
+  }
 
-.menu-items {
-  /* background-color: slateblue; */
-}
+  #menu-close {
+    /* background-color: sienna; */
+  }
+
+  .menu-items {
+    /* background-color: slateblue; */
+  }
 
 #header {
   background-color: rosybrown;
@@ -72,7 +79,7 @@ body {
     background-color: royalblue;
     flex-grow: 1;
     max-width: 992px;
-    height: 2000px;
+    height: 500px;
   }
 
 #footer {
