@@ -5,6 +5,26 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  /* overflow-y: hidden; */
+}
+
+#menu {
+  background-color: rgba(55, 133, 89, 0.5);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-close {
+  /* background-color: sienna; */
+}
+
+.menu-items {
+  /* background-color: slateblue; */
 }
 
 #header {
@@ -52,7 +72,7 @@ body {
     background-color: royalblue;
     flex-grow: 1;
     max-width: 992px;
-    height: 500px;
+    height: 2000px;
   }
 
 #footer {
