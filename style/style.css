@@ -13,6 +13,8 @@ body {
 
 header {
   background-color: rosybrown;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
 }
