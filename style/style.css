@@ -11,7 +11,42 @@ body {
     overflow-y: hidden;
   }
 
-#menu {
+header {
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+}
+
+#header {
+  background-color: yellow;
+  display: flex;
+  flex-grow: 1;
+  max-width: 992px;
+  justify-content: space-between;
+}
+
+  .left-items {
+    background-color: tan;
+  }
+
+    #brand {
+      background-color: tomato;
+    }
+
+  .right-items {
+    background-color: teal;
+    display: flex;
+  }
+
+    .lg-toggle {
+      background-color: wheat;
+    }
+
+    .burger {
+      background-color: yellowgreen;
+    }
+
+nav {
   background-color: rgba(55, 133, 89, 0.5);
   position: absolute;
   height: 100vh;
@@ -26,7 +61,7 @@ body {
     visibility: hidden;
   }
 
-  #menu-close {
+  #close {
     /* background-color: sienna; */
   }
 
@@ -34,42 +69,7 @@ body {
     /* background-color: slateblue; */
   }
 
-#header {
-  background-color: rosybrown;
-  display: flex;
-  justify-content: center;
-}
-
-  .navbar {
-    background-color: yellow;
-    display: flex;
-    flex-grow: 1;
-    max-width: 992px;
-    justify-content: space-between;
-  }
-
-    .left-items {
-      background-color: tan;
-    }
-
-      .logo {
-        background-color: tomato;
-      }
-
-    .right-items {
-      background-color: teal;
-      display: flex;
-    }
-
-      .lg-toggle {
-        background-color: wheat;
-      }
-
-      .burger {
-        background-color: yellowgreen;
-      }
-
-#main-container {
+main {
   background-color: sandybrown;
   display: flex;
   justify-content: center;
@@ -82,7 +82,7 @@ body {
     height: 500px;
   }
 
-#footer {
+footer {
   background-color: skyblue;
   display: flex;
   justify-content: center;
