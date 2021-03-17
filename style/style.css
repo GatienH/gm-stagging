@@ -9,7 +9,15 @@ body {
 
   .overflow-y-hiden {
     overflow-y: hidden;
+    position: relative;
+    height: 100%;
   }
+
+
+nav-menu {
+  background-color: red;
+}
+
 
 header {
   background-color: rosybrown;
@@ -51,6 +59,7 @@ header {
 nav {
   background-color: rgba(55, 133, 89, 0.5);
   position: absolute;
+  left:0;
   height: 100vh;
   width: 100vw;
   display: flex;
