@@ -1,11 +1,13 @@
 class HeaderBar extends HTMLElement {
   constructor() {
     super();
+  }  
 
-    const headerTag = document.body.firstElementChild;
+  connectedCallback() {
+    const header = document.createElement('header');
 
-    const header = document.createElement('div');
-    header.setAttribute('id', 'header');
+    const headerDiv = document.createElement('div');
+    headerDiv.setAttribute('id', 'header');
 
     const leftItems = document.createElement('div')
     leftItems.setAttribute('class', 'left-items');
@@ -76,16 +78,18 @@ class HeaderBar extends HTMLElement {
     navLink6.textContent = 'Page 6';
 
     // FOR NAV NAMING UPDATES SEE ABOVE
+
+    document.body.prepend(header);
     
-    headerTag.appendChild(header);
-    header.appendChild(leftItems);
+    header.appendChild(headerDiv);
+    headerDiv.appendChild(leftItems);
     leftItems.appendChild(brand);
 
-    header.appendChild(rightItems);
+    headerDiv.appendChild(rightItems);
     rightItems.appendChild(lgToggle);
     rightItems.appendChild(burger);
 
-    header.appendChild(nav);
+    headerDiv.appendChild(nav);
     nav.appendChild(closeMenu);
     nav.appendChild(navList);
 

@@ -10,7 +10,7 @@ body {
   .overflow-y-hiden {
     overflow-y: hidden;
     /* position: relative; */
-    /* height: 100%; */
+    height: 100vh;
   }
 
 
@@ -21,10 +21,12 @@ nav-menu {
 
 header {
   background-color: rosybrown;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  /* top: 0; */
   display: flex;
   justify-content: center;
+
+  width: 100vw;
 }
 
 #header {
