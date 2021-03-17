@@ -9,7 +9,7 @@ body {
 
   .overflow-y-hiden {
     overflow-y: hidden;
-    /* position: relative; */
+    position: relative;
     height: 100vh;
   }
 
