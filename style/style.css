@@ -80,6 +80,10 @@ nav {
     background-color: slateblue;
   } */
 
+  .active {
+    color: red;
+  }
+
 main {
   background-color: sandybrown;
   display: flex;

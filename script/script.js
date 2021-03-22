@@ -153,6 +153,11 @@ class HeaderBar extends HTMLElement {
       const navLink = document.createElement('a');
 
       navLink.setAttribute('href', `${path}${e[lgs.indexOf(lg) + 1][0]}`);
+      
+      if (page === e[0]) {
+        navLink.setAttribute('class', 'active'); 
+      }
+
       navLink.textContent = e[lgs.indexOf(lg) + 1][1];
       navList.appendChild(navElmt).appendChild(navLink);
     });
