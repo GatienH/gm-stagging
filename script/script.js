@@ -1,8 +1,4 @@
 class HeaderBar extends HTMLElement {
-  // constructor() {
-  //   super();
-  // }
-
   connectedCallback() {
     // *********************************************
     // ALL ABOUT LANGUAGES AND TRANSLATIONS IS BELOW
@@ -11,7 +7,7 @@ class HeaderBar extends HTMLElement {
       // Languages names and their related languages subfolders names have to be the same (except for the main one (first one in lgs)
       // const lgs = ['default_lg', 'sub_lg1'] 
 
-      const lgs = ['fr', 'en'];
+      const lgs = ['fr', 'en', 'es'];
 
       // The position of each element in the pages array affects their displaying order inside the navigation menu
       // const pages = [
@@ -21,22 +17,22 @@ class HeaderBar extends HTMLElement {
 
       const pages = [
         ['home',
-          ['index.html', 'Accueil'], ['index.html', 'Home page']
+          ['index.html', 'Accueil'], ['index.html', 'Home page'], ['index_es.html', 'Home page']
         ],
         ['who-am-i',
-          ['qui-suis-je.html', 'Qui suis-je ?'], ['who-am-i.html', 'Who am I?']
+          ['qui-suis-je.html', 'Qui suis-je ?'], ['who-am-i.html', 'Who am I?'], ['who-am-i_es.html', 'Who am I?']
         ],
         ['page3',
-          ['page3_fr.html', 'Page 3 FR'], ['page3_en.html', 'Page 3 EN']
+          ['page3_fr.html', 'Page 3 FR'], ['page3_en.html', 'Page 3 EN'], ['page3_es.html', 'Page 3 ES']
         ],
         ['page4',
-          ['page4_fr.html', 'Page 4 FR'], ['page_en.html', 'Page 4 EN']
+          ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN'], ['page4_es.html', 'Page 4 ES']
         ],
         ['page5',
-          ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN']
+          ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN'], ['page5_es.html', 'Page 5 ES']
         ],
         ['contact-us',
-          ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us']
+          ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us'], ['contact_es.html', 'Contact us ES']
         ]
       ];
 
@@ -54,8 +50,12 @@ class HeaderBar extends HTMLElement {
     // generate nav menu
     const menu = this.generateMenu(lg, page, lgs, pages);
 
-    // add menu to nav to header to body
+    // set lg toggle links
+    const lgToggleLinks = this.setLgToggle(lg, page, lgs, pages);
+
+    // add menu to nav to header & lgToggle to header to body
     nav.appendChild(menu);
+    header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
     header.querySelector("#header").appendChild(nav);
     document.body.prepend(header);
 
@@ -102,9 +102,9 @@ class HeaderBar extends HTMLElement {
     leftItems.textContent = '.left-items';
     brand.textContent = '#brand';
     rightItems.textContent = '.right-items';
-    lgToggle.textContent = '.lg-toggle';
+    // lgToggle.textContent = '.lg-toggle';
     burger.innerHTML = `
-      #burger
+      <! -- #burger -->
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
       </svg>
@@ -144,7 +144,7 @@ class HeaderBar extends HTMLElement {
   }
 
   generateMenu(lg, page, lgs, pages) {
-    const path = this.setPath(lg, lgs);
+    let path = this.setPath(lg, lgs);
 
     const navList = document.createElement('ul');
 
@@ -165,6 +165,33 @@ class HeaderBar extends HTMLElement {
     return navList;
   }
 
+  setLgToggle(lg, page, lgs, pages) {
+    const lgToggleElmt = document.createElement('div');
+    let lgToggleLink;
+
+    lgs.forEach( e => {
+      if (e === lg) {
+        lgToggleLink = document.createElement('span');
+      } else {
+        let path = this.setPath(e, lgs);
+
+        lgToggleLink = document.createElement('a');
+        lgToggleLink.setAttribute('href', `${path}${pages.filter( e => e[0] === page )[0][lgs.indexOf(e) + 1][0]}`);
+      }
+      
+      lgToggleLink.textContent = e.toUpperCase();
+      lgToggleElmt.appendChild(lgToggleLink);
+
+      if (lgs.length > 1 && (lgs.indexOf(e) < lgs.length - 1) ) {
+        let lgToggleSep = document.createElement('span');
+        lgToggleSep.textContent = ' | ';
+        lgToggleElmt.appendChild(lgToggleSep);
+      }
+    });
+
+    return lgToggleElmt;
+  }
+
   setPath(lg, lgs) {
     if (lg && lgs.indexOf(lg) > 0) {
       return `./${lg}/`;
@@ -177,6 +204,8 @@ class HeaderBar extends HTMLElement {
     const html = document.querySelector("html");
     const body = document.querySelector("body");
     const nav = document.querySelector("nav");
+
+    // check for optims
     html.classList.toggle("overflow-y-hiden");
     body.classList.toggle("overflow-y-hiden");
     nav.classList.toggle("hidden");
