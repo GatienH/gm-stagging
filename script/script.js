@@ -99,9 +99,9 @@ class HeaderBar extends HTMLElement {
     burger.setAttribute('class', 'menu-toggle');
 
     // add content and images
-    leftItems.textContent = '.left-items';
+    // leftItems.textContent = '.left-items';
     brand.textContent = '#brand';
-    rightItems.textContent = '.right-items';
+    // rightItems.textContent = '.right-items';
     // lgToggle.textContent = '.lg-toggle';
     burger.innerHTML = `
       <! -- #burger -->
@@ -144,7 +144,7 @@ class HeaderBar extends HTMLElement {
   }
 
   generateMenu(lg, page, lgs, pages) {
-    let path = this.setPath(lg, lgs);
+    // let path = this.setPath(lg, lgs);
 
     const navList = document.createElement('ul');
 
@@ -152,7 +152,8 @@ class HeaderBar extends HTMLElement {
       const navElmt = document.createElement('li');
       const navLink = document.createElement('a');
 
-      navLink.setAttribute('href', `${path}${e[lgs.indexOf(lg) + 1][0]}`);
+      // navLink.setAttribute('href', `${path}${e[lgs.indexOf(lg) + 1][0]}`);
+      navLink.setAttribute('href', e[lgs.indexOf(lg) + 1][0]);
       
       if (page === e[0]) {
         navLink.setAttribute('class', 'active'); 
@@ -173,7 +174,7 @@ class HeaderBar extends HTMLElement {
       if (e === lg) {
         lgToggleLink = document.createElement('span');
       } else {
-        let path = this.setPath(e, lgs);
+        let path = this.setPath(e, lg, lgs);
 
         lgToggleLink = document.createElement('a');
         lgToggleLink.setAttribute('href', `${path}${pages.filter( e => e[0] === page )[0][lgs.indexOf(e) + 1][0]}`);
@@ -192,11 +193,13 @@ class HeaderBar extends HTMLElement {
     return lgToggleElmt;
   }
 
-  setPath(lg, lgs) {
-    if (lg && lgs.indexOf(lg) > 0) {
-      return `./${lg}/`;
+  setPath(e, lg, lgs) {
+    if (lgs.indexOf(lg) === 0) {
+      return `./${e}/`;
+    } else if (lgs.indexOf(e) === 0) {
+      return `../`;
     } else {
-      return '';
+      return `../${e}/`;
     }
   }
 
