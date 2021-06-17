@@ -128,9 +128,6 @@ main {
 
   #referees {
     background-color: #F1F1F1;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
     padding-top: 125px;
     padding-bottom: 155px;
   }
