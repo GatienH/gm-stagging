@@ -104,8 +104,10 @@ nav {
 main {
   /* background-color: sandybrown; */
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
   h1 {
     position: absolute;
     top: 350px;
@@ -117,8 +119,20 @@ main {
   #offer {
     background-color: white;
     margin-top: 565px;
+    padding-top: 220px;
+    padding-bottom: 110px;
     width: 100vw;
-    height: 5000px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #referees {
+    background-color: #F1F1F1;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 125px;
+    padding-bottom: 155px;
   }
 
 footer {
