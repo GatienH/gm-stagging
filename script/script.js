@@ -7,7 +7,7 @@ class HeaderBar extends HTMLElement {
       // Languages names and their related languages subfolders names have to be the same (except for the main one (first one in lgs)
       // const lgs = ['default_lg', 'sub_lg1'] 
 
-      const lgs = ['fr', 'en', 'es'];
+      const lgs = ['fr', 'en'];
 
       // The position of each element in the pages array affects their displaying order inside the navigation menu
       // const pages = [
@@ -17,22 +17,22 @@ class HeaderBar extends HTMLElement {
 
       const pages = [
         ['home',
-          ['index.html', 'Accueil'], ['index.html', 'Home page'], ['index_es.html', 'Home page']
+          ['index.html', 'Accueil'], ['index.html', 'Home page']
         ],
         ['who-am-i',
-          ['qui-suis-je.html', 'Qui suis-je ?'], ['who-am-i.html', 'Who am I?'], ['who-am-i_es.html', 'Who am I?']
+          ['qui-suis-je.html', 'Qui suis-je ?'], ['who-am-i.html', 'Who am I?']
         ],
         ['page3',
-          ['page3_fr.html', 'Page 3 FR'], ['page3_en.html', 'Page 3 EN'], ['page3_es.html', 'Page 3 ES']
+          ['page3_fr.html', 'Page 3 FR'], ['page3_en.html', 'Page 3 EN']
         ],
         ['page4',
-          ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN'], ['page4_es.html', 'Page 4 ES']
+          ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN']
         ],
         ['page5',
-          ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN'], ['page5_es.html', 'Page 5 ES']
+          ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN']
         ],
         ['contact-us',
-          ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us'], ['contact_es.html', 'Contact us ES']
+          ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us']
         ]
       ];
 
@@ -99,14 +99,15 @@ class HeaderBar extends HTMLElement {
     burger.setAttribute('class', 'menu-toggle');
 
     // add content and images
-    // leftItems.textContent = '.left-items';
-    brand.textContent = '#brand';
-    // rightItems.textContent = '.right-items';
-    // lgToggle.textContent = '.lg-toggle';
+    
+    // TO DO : add image path for EN
+    brand.innerHTML = `<img src="./img/GM_logo.svg" alt="GM Executive search" />`
     burger.innerHTML = `
       <! -- #burger -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      <svg width="68" height="44" viewBox="0 0 68 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="67.8359" y1="41.6432" x2="-8.04962e-08" y2="41.6432" stroke="#3622B4" stroke-width="3"/>
+      <line x1="67.8359" y1="22.0065" x2="-1.02285e-07" y2="22.0065" stroke="#3622B4" stroke-width="3"/>
+      <line x1="67.8359" y1="2.36975" x2="-1.02285e-07" y2="2.36974" stroke="#3622B4" stroke-width="3"/>
       </svg>
     `;
 
@@ -115,8 +116,8 @@ class HeaderBar extends HTMLElement {
     headerDiv.appendChild(leftItems);
     leftItems.appendChild(brand);
     headerDiv.appendChild(rightItems);
-    rightItems.appendChild(lgToggle);
     rightItems.appendChild(burger);
+    rightItems.appendChild(lgToggle);
 
     return header;
   }

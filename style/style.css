@@ -31,7 +31,7 @@ header {
   background-color: yellow;
   display: flex;
   flex-grow: 1;
-  max-width: 992px;
+  max-width: 1200px;
   justify-content: space-between;
 }
 
@@ -41,19 +41,26 @@ header {
 
     #brand {
       background-color: tomato;
+      margin: 50px 30px;
+      height: 83px;
     }
 
   .right-items {
     background-color: teal;
     display: flex;
+    align-items: center;
   }
 
-    .lg-toggle {
-      background-color: wheat;
-    }
+  #burger, .lg-toggle {
+    margin: auto 20px;
+  }
 
     #burger {
       background-color: yellowgreen;
+    }
+
+    .lg-toggle {
+      background-color: wheat;
     }
 
 nav {
