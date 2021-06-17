@@ -1,3 +1,7 @@
+html {
+  background-color: #F1F1F1;
+}
+
 html, body {
   margin: 0;
 }
@@ -5,6 +9,8 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  background: url(../img/m_char.svg) top right no-repeat;
+  background-attachment: fixed;
 }
 
   .overflow-y-hiden {
@@ -14,11 +20,14 @@ body {
   }
 
 nav-menu {
-  background-color: red;
+  /* background-color: red; */
 }
 
 header {
-  background-color: rosybrown;
+  
+  background: url(../img/m_char_header.svg) top right no-repeat;
+  background-attachment: fixed;
+  background-color: #F1F1F1;
   position: fixed;
   /* top: 0; */
   display: flex;
@@ -28,7 +37,7 @@ header {
 }
 
 #header {
-  background-color: yellow;
+  /* background-color: yellow; */
   display: flex;
   flex-grow: 1;
   max-width: 1200px;
@@ -36,17 +45,17 @@ header {
 }
 
   .left-items {
-    background-color: tan;
+    /* background-color: tan; */
   }
 
     #brand {
-      background-color: tomato;
+      /* background-color: tomato; */
       margin: 50px 30px;
       height: 83px;
     }
 
   .right-items {
-    background-color: teal;
+    /* background-color: teal; */
     display: flex;
     align-items: center;
   }
@@ -56,15 +65,15 @@ header {
   }
 
     #burger {
-      background-color: yellowgreen;
+      /* background-color: yellowgreen; */
     }
 
     .lg-toggle {
-      background-color: wheat;
+      /* background-color: wheat; */
     }
 
 nav {
-  background-color: rgba(55, 133, 89, 0.5);
+  /* background-color: rgba(55, 133, 89, 0.5); */
   position: absolute;
   left:0;
   height: 100vh;
@@ -92,13 +101,13 @@ nav {
   }
 
 main {
-  background-color: sandybrown;
+  /* background-color: sandybrown; */
   display: flex;
   justify-content: center;
 }
 
   .content {
-    background-color: royalblue;
+    /* background-color: royalblue; */
     flex-grow: 1;
     max-width: 992px;
     height: 2000px;
