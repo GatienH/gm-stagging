@@ -115,8 +115,8 @@ main {
     margin: 0 30px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    /* font-style: normal;
-    font-weight: bold; */
+    font-style: normal;
+    font-weight: 700;
     font-size: 2.2em;
     line-height: 132.4%;
   }
@@ -127,9 +127,73 @@ main {
     padding-top: 220px;
     padding-bottom: 110px;
     width: 100vw;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
   }
+
+    .triangle {
+      /* background-color: red; */
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+      .triangle svg path {
+        fill:#3622B4;
+      }
+
+    .offer-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .mngt {
+      /* background-color: violet; */
+    }
+
+      .number {
+        font-size: 7.13em;
+        color: rgba(228, 228, 228, 0.5);
+        line-height: 100%;
+      }
+
+        .nb-01 {
+          text-align: right;
+        }
+
+      .mngt-label {
+        font-size: 1.46em;
+        color: black;
+        line-height: 132.4%;
+        margin: 0 8px;
+      }
+
+        .top {
+          text-align: right;
+        }
+
+    .cross {
+      /* background-color: teal; */
+      margin: 0 55px;
+    }
+
+    .btn {
+      background: url(../img/btn.svg) center no-repeat;
+      margin-top: 75px;
+      height: 55px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      text-align: center;
+      color: #3622B4;
+      font-size: 1em;
+      line-height: 55px;
+      z-index: 1000;
+    }
 
   #referees {
     background-color: #F1F1F1;
