@@ -197,9 +197,49 @@ main {
 
   #referees {
     background-color: #F1F1F1;
-    padding-top: 125px;
-    padding-bottom: 155px;
+    /* padding-top: 125px;
+    padding-bottom: 155px; */
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
   }
+    .watermark {
+      background-color: red;
+      /* max-height: 376px; */
+      /* max-width: 789px; */
+      background: url(../img/ref_filigranne_fr.png) center no-repeat;
+      background-size: contain;
+      margin-top: 125px;
+      margin-bottom: 155px;
+    }
+
+    .referees-list {
+      margin: 30px auto;
+      /* background-color: blueviolet; */
+      display: flex;
+      max-width: 1200px;
+      align-items: center;
+    }
+
+    .logo-ref {
+      /* background-color: red; */
+      margin: auto 15px;
+      flex-grow: 1;
+      flex-basis: 0;
+      height: 112px;
+      display: flex;
+    }
+
+    .logo-ref img {
+      display: block;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+    }
 
 footer {
   background-color: skyblue;
