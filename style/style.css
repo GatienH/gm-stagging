@@ -117,9 +117,9 @@ main {
     padding-bottom: 110px;
     width: 100vw;
     text-transform: uppercase;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
     /* .triangle {
@@ -132,12 +132,14 @@ main {
       } */
 
     .offer-details {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      /* background-color: violet; */
+      /* display: flex;
+      justify-content: center; */
+      /* align-items: center; */
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 800;
+      max-width: 1200px;
     }
 
     .mngt {
@@ -181,7 +183,8 @@ main {
       /* color: #252377; */
       font-size: 1em;
       line-height: 55px;
-      z-index: 1000;
+      /* z-index: 1000; */
+      width: 235px;
       /* text-transform: uppercase; */
     }
 
@@ -198,13 +201,12 @@ main {
     width:100%;
   }
     .watermark {
-      background-color: red;
+      /* background-color: red; */
       /* max-height: 376px; */
       /* max-width: 789px; */
       background: url(../img/ref_filigranne_fr.png) center no-repeat;
       background-size: contain;
-      margin-top: 125px;
-      margin-bottom: 155px;
+      margin: 125px 30px 155px 30px;
     }
 
     .referees-list {
