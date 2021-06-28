@@ -24,7 +24,6 @@ nav-menu {
 }
 
 header {
-  
   background: url(../img/m_char_header.svg) top right no-repeat;
   background-attachment: fixed;
   background-color: #F1F1F1;
@@ -36,6 +35,7 @@ header {
   width: 100vw;
   z-index: 1000;
 }
+
 
 #header {
   /* background-color: yellow; */
@@ -242,13 +242,58 @@ main {
     }
 
 footer {
-  background-color: skyblue;
+  background-color: #3622B4;
   display: flex;
   justify-content: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9em;
 }
+
+  footer, footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+  footer ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
 
   .footer-content {
     background-color: salmon;
+    display: flex;
     flex-grow: 1;
-    max-width: 992px;
+    max-width: 1200px;
   }
+
+  .footer-left, .footer-middle, .footer-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+  }
+
+  .footer-middle {
+    align-items: center;
+  }
+
+  .footer-middle img {
+    max-height: 68px;
+    max-width: 194px;
+  }
+
+  .footer-right {
+    align-items: flex-end;
+  }
+  
+  
+
+    
