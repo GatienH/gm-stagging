@@ -55,7 +55,10 @@ class HeaderBar extends HTMLElement {
 
     // add menu to nav to header & lgToggle to header to body
     nav.appendChild(menu);
-    header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
+
+    // uncomment for lg toggle
+    // header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
+
     header.querySelector("#header").appendChild(nav);
     document.body.prepend(header);
 
@@ -86,7 +89,10 @@ class HeaderBar extends HTMLElement {
     const leftItems = document.createElement('div')
     const brand = document.createElement('div');
     const rightItems = document.createElement('div');
-    const lgToggle = document.createElement('div');
+
+    // uncomment for lg toggle
+    // const lgToggle = document.createElement('div');
+
     const burger = document.createElement('div');
 
     // set ids and class
@@ -94,7 +100,10 @@ class HeaderBar extends HTMLElement {
     leftItems.setAttribute('class', 'left-items');
     brand.setAttribute('id', 'brand');
     rightItems.setAttribute('class', 'right-items');
-    lgToggle.setAttribute('class', 'lg-toggle');
+
+    // uncomment for lg toggle
+    // lgToggle.setAttribute('class', 'lg-toggle');
+
     burger.setAttribute('id', 'burger');
     burger.setAttribute('class', 'menu-toggle');
 
@@ -117,7 +126,9 @@ class HeaderBar extends HTMLElement {
     leftItems.appendChild(brand);
     headerDiv.appendChild(rightItems);
     rightItems.appendChild(burger);
-    rightItems.appendChild(lgToggle);
+
+    // uncomment for lg toggle
+    // rightItems.appendChild(lgToggle);
 
     return header;
   }

@@ -38,11 +38,11 @@ header {
 
 
 #header {
-  /* background-color: yellow; */
   display: flex;
   flex-grow: 1;
   max-width: 1200px;
   justify-content: space-between;
+  margin: 50px 30px 30px 30px;
 }
 
   .left-items {
@@ -50,27 +50,15 @@ header {
   }
 
     #brand {
-      /* background-color: tomato; */
-      margin: 50px 30px;
       height: 83px;
     }
 
   .right-items {
-    /* background-color: teal; */
     display: flex;
     align-items: center;
   }
-
-  #burger, .lg-toggle {
-    margin: auto 20px;
-  }
-
-    #burger {
-      /* background-color: yellowgreen; */
-    }
-
     .lg-toggle {
-      /* background-color: wheat; */
+      margin-left: 40px;
     }
 
 nav {
