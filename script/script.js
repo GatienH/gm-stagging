@@ -105,9 +105,9 @@ class HeaderBar extends HTMLElement {
     burger.innerHTML = `
       <! -- #burger -->
       <svg width="68" height="44" viewBox="0 0 68 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="67.8359" y1="41.6432" x2="-8.04962e-08" y2="41.6432" stroke="#3622B4" stroke-width="3"/>
-      <line x1="67.8359" y1="22.0065" x2="-1.02285e-07" y2="22.0065" stroke="#3622B4" stroke-width="3"/>
-      <line x1="67.8359" y1="2.36975" x2="-1.02285e-07" y2="2.36974" stroke="#3622B4" stroke-width="3"/>
+      <line x1="67.8359" y1="41.6432" x2="-8.04962e-08" y2="41.6432" stroke="#252377" stroke-width="3"/>
+      <line x1="67.8359" y1="22.0065" x2="-1.02285e-07" y2="22.0065" stroke="#252377" stroke-width="3"/>
+      <line x1="67.8359" y1="2.36975" x2="-1.02285e-07" y2="2.36974" stroke="#252377" stroke-width="3"/>
       </svg>
     `;
 
