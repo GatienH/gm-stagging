@@ -36,6 +36,11 @@ header {
   z-index: 1000;
 }
 
+.bg-white {
+  background: none;
+  background-color:white;
+}
+
 
 #header {
   display: flex;

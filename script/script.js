@@ -228,3 +228,21 @@ class HeaderBar extends HTMLElement {
 }
 
 customElements.define('header-bar', HeaderBar);
+
+
+
+const header = document.querySelector('header');
+
+function onWindowScroll(event) {
+  var headerHeight = document.querySelector('header').offsetHeight;
+  var offerMarginTop = document.querySelector('#offer').offsetTop;
+  var offerHeight = document.querySelector('#offer').offsetHeight;
+
+  if (window.pageYOffset < (offerMarginTop - headerHeight) || window.pageYOffset > (offerMarginTop - headerHeight + offerHeight)) {
+    header.classList.remove('bg-white')
+  } else {
+    header.classList.add('bg-white')
+  }
+}
+
+window.addEventListener('scroll', onWindowScroll)
