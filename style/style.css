@@ -335,11 +335,11 @@ main {
       /* max-width: 789px; */
       background: url(../img/ref_filigranne_fr.png) center no-repeat;
       background-size: contain;
-      margin: 125px 30px 155px 30px;
+      margin: 31px 15px 38px 15px;
     }
 
     .referees-list {
-      margin: 30px auto;
+      margin: 15px auto;
       /* background-color: blueviolet; */
       display: flex;
       max-width: 1200px;
@@ -360,6 +360,22 @@ main {
       margin: auto;
       max-height: 100%;
       max-width: 100%;
+    }
+
+    @media (min-width: 576px) {
+      .watermark {
+        margin: 63px 15px 77px 15px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .watermark {
+        margin: 125px 30px 155px 30px;
+      }
+
+      .referees-list {
+        margin: 30px auto;
+      }
     }
 
 footer {
