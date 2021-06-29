@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   background: url(../img/m_char.svg) top right no-repeat;
+  background-size: auto 282px;
   background-attachment: fixed;
 }
 
@@ -24,22 +25,52 @@ nav-menu {
 }
 
 header {
-  background: url(../img/m_char_header.svg) top right no-repeat;
-  background-attachment: fixed;
-  background-color: #F1F1F1;
+  /* background: url(../img/m_char.svg) top right no-repeat;
+  background-attachment: fixed; */
+  
+  /* background-color: #F1F1F1; */
   position: fixed;
-  /* top: 0; */
   display: flex;
   justify-content: center;
-
   width: 100vw;
+  
+}
+
+.bg-grey-img {
+  background: url(../img/m_char.svg) top right no-repeat;
+  background-attachment: fixed;
+  background-size: auto 282px;
+  background-color: #F1F1F1;
   z-index: 1000;
 }
 
 .bg-white {
-  background: none;
-  background-color:white;
+  background-color: white;
+  z-index: 1000;
 }
+
+.bg-grey {
+  background-color: #F1F1F1;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  body, .bg-grey-img {
+    background-size: auto;
+  }
+ }
+
+ 
+
+  /* .bg-grey {
+    
+    z-index: 5000;  
+  } */
+
+  .bg-white {
+    background-color:white;
+  }
+
 
 
 #header {
@@ -47,24 +78,36 @@ header {
   flex-grow: 1;
   max-width: 1200px;
   justify-content: space-between;
-  margin: 50px 30px 30px 30px;
+  margin: 25px 15px 15px 15px;
 }
 
-  .left-items {
-    /* background-color: tan; */
+#brand, #brand img {
+  height: 42px;
+}
+
+@media (min-width: 768px) {
+  #header {
+    margin: 50px 30px 30px 30px;
   }
 
-    #brand {
-      height: 83px;
-    }
-
-  .right-items {
-    display: flex;
-    align-items: center;
+  #brand, #brand img {
+    height: 83px;
   }
-    .lg-toggle {
-      margin-left: 40px;
-    }
+
+  #burger svg {
+    height: 44px;
+    width: 68px;
+  }
+}
+
+.right-items {
+  display: flex;
+  align-items: center;
+}
+
+/* .lg-toggle {
+  margin-left: 40px;
+} */
 
 nav {
   /* background-color: rgba(55, 133, 89, 0.5); */
@@ -104,7 +147,7 @@ main {
 
   h1 {
     position: absolute;
-    top: 350px;
+    top: 175px;
     max-width: 1200px;
     margin: 0 30px;
     text-align: center;
@@ -117,7 +160,7 @@ main {
 
   #offer {
     background-color: white;
-    margin-top: 565px;
+    margin-top: 282px;
     padding-top: 220px;
     padding-bottom: 110px;
     width: 100vw;
@@ -125,6 +168,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      top: 350px;
+    }
+
+    #offer {
+      margin-top: 565px;
+    }
   }
 
     /* .triangle {

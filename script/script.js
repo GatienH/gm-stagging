@@ -96,6 +96,7 @@ class HeaderBar extends HTMLElement {
     const burger = document.createElement('div');
 
     // set ids and class
+    header.setAttribute('class', 'bg-grey-img');
     headerDiv.setAttribute('id', 'header');
     leftItems.setAttribute('class', 'left-items');
     brand.setAttribute('id', 'brand');
@@ -113,7 +114,7 @@ class HeaderBar extends HTMLElement {
     brand.innerHTML = `<img src="./img/GM_logo.svg" alt="GM Executive search" />`
     burger.innerHTML = `
       <! -- #burger -->
-      <svg width="68" height="44" viewBox="0 0 68 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="34" height="22" viewBox="0 0 68 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line x1="67.8359" y1="41.6432" x2="-8.04962e-08" y2="41.6432" stroke="#252377" stroke-width="3"/>
       <line x1="67.8359" y1="22.0065" x2="-1.02285e-07" y2="22.0065" stroke="#252377" stroke-width="3"/>
       <line x1="67.8359" y1="2.36975" x2="-1.02285e-07" y2="2.36974" stroke="#252377" stroke-width="3"/>
@@ -229,8 +230,6 @@ class HeaderBar extends HTMLElement {
 
 customElements.define('header-bar', HeaderBar);
 
-
-
 const header = document.querySelector('header');
 
 function onWindowScroll(event) {
@@ -238,11 +237,21 @@ function onWindowScroll(event) {
   var offerMarginTop = document.querySelector('#offer').offsetTop;
   var offerHeight = document.querySelector('#offer').offsetHeight;
 
-  if (window.pageYOffset < (offerMarginTop - headerHeight) || window.pageYOffset > (offerMarginTop - headerHeight + offerHeight)) {
-    header.classList.remove('bg-white')
-  } else {
-    header.classList.add('bg-white')
-  }
+  // TO DO : manage class with toggles
+  if (window.pageYOffset > (offerMarginTop - headerHeight)) {
+      header.classList.add('bg-white');
+      header.classList.remove('bg-grey-img');
+      header.classList.remove('bg-grey');
+
+      if (window.pageYOffset > (offerMarginTop - headerHeight + offerHeight)) {
+        header.classList.add('bg-grey');
+        header.classList.remove('bg-white');
+      }
+    } else {
+      header.classList.add('bg-grey-img');
+      header.classList.remove('bg-white');
+      header.classList.remove('bg-grey');
+    }
 }
 
 window.addEventListener('scroll', onWindowScroll)
