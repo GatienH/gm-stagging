@@ -13,7 +13,6 @@ body {
   background-size: auto 282px;
   background-attachment: fixed;
 }
-
   .overflow-y-hiden {
     overflow-y: hidden;
     position: relative;
@@ -27,13 +26,11 @@ nav-menu {
 header {
   /* background: url(../img/m_char.svg) top right no-repeat;
   background-attachment: fixed; */
-  
   /* background-color: #F1F1F1; */
   position: fixed;
   display: flex;
   justify-content: center;
   width: 100vw;
-  
 }
 
 .bg-grey-img {
@@ -59,19 +56,6 @@ header {
     background-size: auto;
   }
  }
-
- 
-
-  /* .bg-grey {
-    
-    z-index: 5000;  
-  } */
-
-  .bg-white {
-    background-color:white;
-  }
-
-
 
 #header {
   display: flex;
@@ -149,13 +133,33 @@ main {
     position: absolute;
     top: 175px;
     max-width: 1200px;
-    margin: 0 30px;
+    margin: 0 15px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 2.2em;
+    font-size:1.2em;
     line-height: 132.4%;
+  }
+
+  @media (min-width: 567px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      top: 350px;
+      margin: 0 30px;
+      font-size: 2em;
+    }
+  }
+
+  @media (min-width: 800px) {
+    h1 {
+      font-size: 2.2em;
+    }
   }
 
   #offer {
@@ -171,10 +175,6 @@ main {
   }
 
   @media (min-width: 768px) {
-    h1 {
-      top: 350px;
-    }
-
     #offer {
       margin-top: 565px;
     }
