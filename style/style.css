@@ -140,6 +140,7 @@ main {
     font-weight: 700;
     font-size:1.2em;
     line-height: 132.4%;
+    z-index: 500;
   }
 
   @media (min-width: 567px) {
@@ -165,7 +166,6 @@ main {
   #offer {
     background-color: white;
     margin-top: 282px;
-    padding-top: 110px;
     padding-bottom: 65px;
     width: 100vw;
     text-transform: uppercase;
@@ -174,19 +174,87 @@ main {
     align-items: center;
   }
 
-  @media (min-width: 576px) {
-    #offer {
-      padding-top: 165px;
-    }
-  }
-
   @media (min-width: 768px) {
     #offer {
       margin-top: 565px;
-      padding-top: 220px;
       padding-bottom: 110px;
     }
   }
+
+    .stamp {
+      width: 100%;
+      max-width: 1200px;
+      height: 108px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .stamp img {
+      -webkit-animation: rotating 20s linear infinite;
+      -moz-animation: rotating 20s linear infinite;
+      -ms-animation: rotating 20s linear infinite;
+      -o-animation: rotating 20s linear infinite;
+      animation: rotating 20s linear infinite;
+
+      margin-left: 37px;
+      height: 108px;
+    }
+
+    .stamp img:hover {
+      animation-play-state: paused;
+    }
+
+    @media (min-width: 576px) {
+      .stamp {
+        height: 144px;
+      }
+
+      .stamp img {
+        height: 144px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .stamp {
+        height: 216px;
+        margin-bottom: 55px;
+      }
+
+      .stamp img {
+        height: 216px;
+        margin-left: 75px;
+      }
+    }
+
+    @-webkit-keyframes rotating /* Safari and Chrome */ {
+      from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes rotating {
+      from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -ms-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+      }
+    }
 
     /* .triangle {
       text-align: center;
@@ -305,7 +373,7 @@ main {
       font-size: 0.8em;
       line-height: 40px;
       height: 40px;
-      width: 178px;
+      width: 178px; 
     }
 
     @media (min-width: 768px) {
