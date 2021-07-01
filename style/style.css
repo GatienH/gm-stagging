@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   background: url(../img/m_char.svg) top right no-repeat;
-  background-size: auto 282px;
+  background-size: auto 264px;
   background-attachment: fixed;
 }
   .overflow-y-hiden {
@@ -36,7 +36,7 @@ header {
 .bg-grey-img {
   background: url(../img/m_char.svg) top right no-repeat;
   background-attachment: fixed;
-  background-size: auto 282px;
+  background-size: auto 264px;
   background-color: #F1F1F1;
   z-index: 1000;
 }
@@ -131,8 +131,8 @@ main {
 
   h1 {
     position: absolute;
-    top: 175px;
-    max-width: 1200px;
+    top: 137px;
+    /* max-width: 1200px; */
     margin: 0 15px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -143,17 +143,33 @@ main {
     z-index: 500;
   }
 
+  h1 p {
+    margin: 0;
+  }
+
+  h1 p:last-child {
+    margin-top: 30px;
+  }
+
   @media (min-width: 567px) {
     h1 {
       font-size: 1.5em;
     }
   }
 
+  h1 p:last-child {
+    margin-top: 15px;
+  }
+
   @media (min-width: 768px) {
     h1 {
-      top: 350px;
+      top: 275px;
       margin: 0 30px;
       font-size: 2em;
+    }
+
+    h1 p:last-child {
+      margin-top: 30px;
     }
   }
 
@@ -161,11 +177,25 @@ main {
     h1 {
       font-size: 2.2em;
     }
+
+    /* h1 p:last-child {
+      margin-top: 30px;
+    } */
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 2.8em;
+    }
+
+    /* h1 p:last-child {
+      margin-top: 30px;
+    } */
   }
 
   #offer {
     background-color: white;
-    margin-top: 282px;
+    margin-top: 264px;
     padding-bottom: 65px;
     width: 100vw;
     text-transform: uppercase;
@@ -176,7 +206,7 @@ main {
 
   @media (min-width: 768px) {
     #offer {
-      margin-top: 565px;
+      margin-top: 528px;
       padding-bottom: 110px;
     }
   }
