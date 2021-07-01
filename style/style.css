@@ -215,8 +215,8 @@ main {
       width: 100%;
       max-width: 1200px;
       height: 108px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
 
     .stamp img {
@@ -246,13 +246,29 @@ main {
 
     @media (min-width: 768px) {
       .stamp {
-        height: 216px;
+        /* height: 216px; */
         margin-bottom: 55px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .stamp img {
+        /* height: 216px; */
+        margin-left: 75px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .stamp {
+        height: 216px;
+        /* margin-bottom: 55px; */
+        margin-top: 30px;
+        margin-bottom: 30px;
       }
 
       .stamp img {
         height: 216px;
-        margin-left: 75px;
+        /* margin-left: 75px; */
       }
     }
 
