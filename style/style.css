@@ -588,3 +588,73 @@ footer {
       margin:0;
     }
   }
+
+/* ################################ */
+/* ## ABOUT                      ## */
+/* ################################ */
+
+
+#bio {
+  margin-top: 264px;
+  /* background-color: #fff; */
+  background-color: red;
+  width: 100%;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 132.411%;
+}
+
+#bio-content {
+  background-color: khaki;
+  max-width: 1300px;
+  margin: 0 auto;
+  /* margin-left:15px; */
+}
+
+#bio-content img {
+  width: 50%;
+  max-width: 597px;
+  float: right;
+  margin-top: -60px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+#bio-content p {
+  background-color: lightcoral;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top:0;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  #bio {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  #bio {
+    margin-top: 528px;
+    font-size: 1.458em;
+  }
+
+  #bio-content p {
+    margin-left: 30px;
+  }
+
+  #bio-content img {
+    margin-top: -120px;
+    margin-left: 45px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #bio-content p {
+    margin-left: 50px;
+  }
+}
