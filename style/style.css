@@ -593,13 +593,11 @@ footer {
 /* ## ABOUT                      ## */
 /* ################################ */
 
-
 #bio {
   margin-top: 264px;
-  /* background-color: #fff; */
-  background-color: red;
+  padding-top: 42px;
+  background-color: #fff;
   width: 100%;
-
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -608,27 +606,21 @@ footer {
 }
 
 #bio-content {
-  background-color: khaki;
   max-width: 1300px;
   margin: 0 auto;
-  /* margin-left:15px; */
 }
 
 #bio-content img {
+  margin-top: -102px;
+  margin-left: 30px;
+  margin-bottom: 15px;
   width: 50%;
   max-width: 597px;
   float: right;
-  margin-top: -60px;
-  margin-left: 30px;
-  margin-bottom: 15px;
 }
 
 #bio-content p {
-  background-color: lightcoral;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top:0;
-  margin-bottom: 15px;
+  margin: 0 15px 1em 15px;
 }
 
 @media (min-width: 576px) {
@@ -640,21 +632,87 @@ footer {
 @media (min-width: 768px) {
   #bio {
     margin-top: 528px;
-    font-size: 1.458em;
+    padding-top: 85px;
+    font-size: 1.313em;
   }
 
   #bio-content p {
     margin-left: 30px;
+    margin-bottom: 1.313em;
   }
 
   #bio-content img {
-    margin-top: -120px;
-    margin-left: 45px;
+    margin-top: -205px;
+    margin-left: 66px;
   }
 }
 
 @media (min-width: 1300px) {
   #bio-content p {
     margin-left: 50px;
+  }
+}
+
+/* TO DO : switch p to h1 / merge & refacto home h1 */
+
+.page-title {
+  position: absolute;
+  top: 199px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 6.125em;
+  line-height: 132.395%;
+  z-index: 500;
+}
+
+.page-title p {
+  max-width: 1200px;
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .page-title p {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .page-title p {
+    margin: 0 auto;
+  }
+}
+
+/* TO DO : refacto stamp and stamp-about + add stamp-home */
+
+.stamp-about {
+  position: absolute;
+  width: 100%;
+  top: 300px;
+}
+
+.stamp-about div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 190px;
+}
+
+.stamp-about img {
+  -webkit-animation: rotating 20s linear infinite;
+  -moz-animation: rotating 20s linear infinite;
+  -ms-animation: rotating 20s linear infinite;
+  -o-animation: rotating 20s linear infinite;
+  animation: rotating 20s linear infinite;
+}
+
+@media (min-width: 1260px) {
+  .stamp-about div {
+    padding-left: 0;
+  }
+  
+  .stamp-about img {
+    margin-left: 160px;
   }
 }
