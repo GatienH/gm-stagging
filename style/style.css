@@ -657,12 +657,12 @@ footer {
 
 .page-title {
   position: absolute;
-  top: 199px;
+  top: 100px;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 6.125em;
+  font-size: 3.063em;
   line-height: 132.395%;
   z-index: 500;
 }
@@ -674,6 +674,11 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .page-title {
+    top: 200px;
+    font-size: 6.125em;
+  }
+
   .page-title p {
     margin: 0 30px;
   }
@@ -690,13 +695,13 @@ footer {
 .stamp-about {
   position: absolute;
   width: 100%;
-  top: 300px;
+  top: 150px;
 }
 
 .stamp-about div {
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 190px;
+  padding-left: 95px;
 }
 
 .stamp-about img {
@@ -705,6 +710,22 @@ footer {
   -ms-animation: rotating 20s linear infinite;
   -o-animation: rotating 20s linear infinite;
   animation: rotating 20s linear infinite;
+
+  width: 95px;
+}
+
+@media (min-width: 768px) {
+  .stamp-about {
+    top: 300px;
+  }
+
+  .stamp-about div {
+    padding-left: 190px;
+  }
+
+  .stamp-about img {
+    width: 190px;
+  }
 }
 
 @media (min-width: 1260px) {
