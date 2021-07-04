@@ -96,7 +96,7 @@ class HeaderBar extends HTMLElement {
     const burger = document.createElement('div');
 
     // set ids and class
-    header.setAttribute('class', 'bg-grey-img');
+    header.setAttribute('class', 'bg-grey bg-img');
     headerDiv.setAttribute('id', 'header');
     leftItems.setAttribute('class', 'left-items');
     brand.setAttribute('id', 'brand');
@@ -242,10 +242,9 @@ function onWindowScroll(event) {
   var whiteBgEnd = document.querySelector('.white-bg-end').offsetTop;
 
   // TO DO : manage class with toggles
-
   if (window.pageYOffset > whiteBgStart - headerHeight) {
     header.classList.add('bg-white');
-    header.classList.remove('bg-grey-img');
+    header.classList.remove('bg-img');
     header.classList.remove('bg-grey');
 
     if (window.pageYOffset > whiteBgEnd - headerHeight) {
@@ -254,63 +253,10 @@ function onWindowScroll(event) {
     }
   }
   else {
-    header.classList.add('bg-grey-img');
+    header.classList.add('bg-grey');
+    header.classList.add('bg-img');
     header.classList.remove('bg-white');
-    header.classList.remove('bg-grey');
   }
-
-  // if (window.pageYOffset > whiteBgStart - headerHeight && window.pageYOffset < whiteBgEnd - headerHeight) {
-  //   // header.classList.remove('bg-grey-img');
-  //   header.classList.add('bg-white');
-  // }
-  // else {
-  //   // header.classList.remove('bg-grey-img');
-  //   header.classList.remove('bg-white');
-  //   // header.classList.add('bg-grey');
-  // }
-
-  // if (window.pageYOffset > whiteBgStart) {
-  //   header.classList.remove('bg-grey-img');
-  // }
-  
-
-
-  // if (window.pageYOffset > whiteBgStart && window.pageYOffset < whiteBgEnd) {
-  //   header.classList.add('bg-white');
-  //   header.classList.remove('bg-grey-img');
-  //   header.classList.remove('bg-grey');
-
-  //   if (window.pageYOffset > (offerMarginTop - headerHeight + offerHeight)) {
-  //     header.classList.add('bg-grey');
-  //     header.classList.remove('bg-white');
-  //   }
-  // } else {
-  //   header.classList.add('bg-grey-img');
-  //   header.classList.remove('bg-white');
-  //   header.classList.remove('bg-grey');
-  // }
 }
-
-// function onWindowScroll(event) {
-//   var headerHeight = document.querySelector('header').offsetHeight;
-//   var offerMarginTop = document.querySelector('#offer').offsetTop;
-//   var offerHeight = document.querySelector('#offer').offsetHeight;
-
-//   // TO DO : manage class with toggles
-//   if (window.pageYOffset > (offerMarginTop - headerHeight)) {
-//       header.classList.add('bg-white');
-//       header.classList.remove('bg-grey-img');
-//       header.classList.remove('bg-grey');
-
-//       if (window.pageYOffset > (offerMarginTop - headerHeight + offerHeight)) {
-//         header.classList.add('bg-grey');
-//         header.classList.remove('bg-white');
-//       }
-//     } else {
-//       header.classList.add('bg-grey-img');
-//       header.classList.remove('bg-white');
-//       header.classList.remove('bg-grey');
-//     }
-// }
 
 window.addEventListener('scroll', onWindowScroll)
