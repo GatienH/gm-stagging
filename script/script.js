@@ -22,8 +22,8 @@ class HeaderBar extends HTMLElement {
         ['about',
           ['a-propos.html', 'À propos'], ['who-am-i.html', 'Who am I?']
         ],
-        ['page3',
-          ['page3_fr.html', 'Page 3 FR'], ['page3_en.html', 'Page 3 EN']
+        ['hiring',
+          ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
         ],
         ['page4',
           ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN']
