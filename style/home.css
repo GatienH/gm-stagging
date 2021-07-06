@@ -1,0 +1,99 @@
+#home-title {
+  top: 137px;
+  margin: 0 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size:1.2em;
+}
+
+#home-title p {
+  margin: 0;
+}
+
+#home-title p:last-child {
+  margin-top: 15px;
+}
+
+#offer-home {
+  margin-top: 264px;
+}
+
+#offer-home .offer-details {
+  margin-top: 22px;
+}
+
+#stamp-home {
+  max-width: 1200px;
+  height: 108px;
+  margin: 15px auto;
+}
+
+#stamp-home img {
+  margin-left: 37px;
+  height: 108px;
+}
+
+@media (min-width: 567px) {
+  #home-title {
+    font-size: 1.5em;
+  }
+
+  #stamp-home {
+    height: 144px;
+  }
+
+  #stamp-home img {
+    height: 144px;
+  }
+}
+
+@media (min-width: 768px) {
+  #home-title {
+    top: 275px;
+    margin: 0 30px;
+    font-size: 2em;
+  }
+
+  #home-title p:last-child {
+    margin-top: 30px;
+  }
+
+  #offer-home {
+    margin-top: 528px;
+  }
+
+  #offer-home .offer-details {
+    margin-top: 44px;
+  }
+
+  #stamp-home {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #stamp-home img {
+    margin-left: 75px;
+  }
+}
+
+@media (min-width: 800px) {
+  #home-title {
+    font-size: 2.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  #home-title {
+    font-size: 2.8em;
+  }
+
+  #stamp-home {
+    height: 216px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #stamp-home img {
+    height: 216px;
+  }
+}
