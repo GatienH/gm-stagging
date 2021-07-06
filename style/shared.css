@@ -1,0 +1,571 @@
+html {
+  background-color: #F1F1F1;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: url(../img/m_char.svg) top right no-repeat;
+  background-size: auto 264px;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  color: #252377;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-size: auto;
+  }
+}
+
+.overflow-y-hiden {
+  overflow-y: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+/* ################################ */
+/* ## HEADER                     ## */
+/* ################################ */
+
+header, #header, .right-items {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  justify-content: center;
+  width: 100vw;
+}
+
+.bg-grey-img, .bg-white, .bg-grey {
+  z-index: 1000;
+}
+
+.bg-img {
+  background: url(../img/m_char.svg) top right no-repeat;
+  background-attachment: fixed;
+  background-size: auto 264px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-grey {
+  background-color: #F1F1F1;
+}
+
+#header {
+  flex-grow: 1;
+  max-width: 1200px;
+  justify-content: space-between;
+  margin: 25px 15px 15px 15px;
+}
+
+.right-items {
+  align-items: center;
+}
+
+/* .lg-toggle {
+  margin-left: 40px;
+} */
+
+nav {
+  position: absolute;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* #close {
+  background-color: sienna;
+} */
+
+/* .menu-items {
+  background-color: slateblue;
+} */
+
+.active {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  .bg-img {
+    background-size: auto;
+  }
+
+  #header {
+    margin: 50px 30px 30px 30px;
+  }
+  
+  #brand svg {
+    width: 237px;
+    height: 83px;
+  }
+
+  #burger svg {
+    height: 44px;
+    width: 68px;
+  }
+}
+
+/* ################################ */
+/* ## MAIN CONTENT               ## */
+/* ################################ */
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  position: absolute;
+  z-index: 500;
+  line-height: 132.4%;
+}
+
+.page-title {
+  top: 100px;
+  width: 100%;
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 3.063em;
+}
+  
+.page-title p {
+  max-width: 1200px;
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    top: 200px;
+    font-size: 6.125em;
+  }
+
+  .page-title p {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .page-title p {
+    margin: 0 auto;
+  }
+}
+
+/* ## Stamps                     ## */
+/* ################################ */
+
+.stamp {
+  width: 100%;
+}
+
+.stamp img {
+  -webkit-animation: rotating 20s linear infinite;
+  -moz-animation: rotating 20s linear infinite;
+  -ms-animation: rotating 20s linear infinite;
+  -o-animation: rotating 20s linear infinite;
+  animation: rotating 20s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+/* ## Offer                      ## */
+/* ################################ */
+
+.offer {
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 55px;
+}
+
+.offer-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
+}
+
+.mngt {
+  font-weight: 800;
+  flex-grow: 1;
+  max-width: min-content;
+}
+
+.mngt-top, .desc-middle {
+  text-align: right;
+}
+
+.mngt-top {
+  margin-top: -10px;
+}
+
+.mngt-top .label {
+  padding-right: 8px;
+}
+
+.mngt-middle {
+  margin: 0 0 -10px auto;
+}
+
+.mngt-middle .label {
+  padding-left: 3px;
+}
+
+.number {
+  font-size: 5em;
+  color: rgba(37, 35, 119, 0.1);
+  line-height: 100%;
+}
+
+.label {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.desc {
+  flex-grow: 3;
+  flex-basis: 0;
+  font-size: 0.875em;
+}
+
+.desc p {
+  margin-top: 0;
+}
+
+.desc-middle p {
+  margin-right: 15px;
+}
+.desc-top p {
+  margin-left: 15px;
+}
+
+.cross {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.cross, .cross svg {
+  height: 60px;
+}
+
+.btn {
+  text-align: center;
+  margin: 40px auto 0 auto;
+  font-weight: 700;
+}
+
+.btn, .btn svg {
+  height: 40px;
+  width: 178px;
+}
+
+.btn svg text{
+  text-anchor: middle;
+}
+
+.btn a:hover .on {
+  stroke:#22FFCA;
+}
+
+.btn a:hover .off {
+  stroke:#fff;
+}
+
+@media (min-width: 576px) {
+  .offer-details {
+    justify-content: center;
+  }
+
+  .mngt-middle {
+    order: 3;
+    margin:0;
+  }
+
+  .cross {
+    order:2;
+    margin: 0 30px 20px 30px;
+    align-self: flex-end;
+  }
+
+  .cross, .cross svg {
+    width: auto;
+  }
+
+  .desc {
+    flex-basis: auto;
+    margin: 15px 0 0 0;
+    width: 50%;
+    font-size: 1.3em;
+  }
+
+  .desc-top {
+    order: 4;
+    text-align: right;
+  }
+
+  .desc-top p {
+    margin: 0 18px 0.875em 0;
+  }
+
+  .desc-middle {
+    order: 5;
+    text-align: left;
+  }
+
+  .desc-middle p {
+    margin: 0 0 0.875em 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .offer {
+    padding-bottom: 110px;
+  }
+
+  .offer-details {
+    margin: 0 30px;
+  }
+
+  .number {
+    font-size: 9em;
+  }
+
+  .label {
+    font-size: 1.46em;
+  }
+
+  .cross {
+    margin: 0 60px 40px 60px;
+  }
+
+  .cross, .cross svg {
+    height: auto;
+    width: auto;
+  }
+
+  .desc {
+    margin: 30px 0 0 0;
+    font-size: 1.75em;
+  }
+
+  .desc-top p {
+    margin-right: 36px;
+  }
+
+  .desc-middle p {
+    margin-left: 36px;
+  }
+
+  .btn {
+    margin-top: 80px;
+  }
+
+  .btn, .btn svg {
+    height: 52px;
+    width: 232px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .offer-details {
+    margin: 0 auto;
+  }
+}
+
+/* ## Referees                   ## */
+/* ################################ */
+
+.referees {
+  background-color: #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+}
+.watermark {
+  background: url(../img/ref_filigranne_fr.png) center no-repeat;
+  background-size: contain;
+  margin: 22px 30px 32px 30px;
+}
+
+.referees-list {
+  margin: 15px auto;
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.logo-ref {
+  margin: auto 15px;
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 112px;
+  display: flex;
+}
+
+.logo-ref img {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .watermark {
+    margin: 44px 30px 65px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .watermark {
+    margin: 88px 30px 130px 30px;
+  }
+
+  .referees-list {
+    margin: 30px auto;
+  }
+}
+
+/* ################################ */
+/* ## FOOTER                     ## */
+/* ################################ */
+
+footer {
+  background-color: #252377;
+  font-weight: 600;
+  font-size: 0.775em;
+  line-height: 185%;
+  padding: 0 15px;
+}
+
+footer, footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.footer-left, .footer-middle, .footer-right {
+  box-sizing: border-box;
+}
+
+.footer-middle {
+  align-self: center;
+  order: 3;
+}
+
+.footer-right {
+  margin: 30px 0;
+}
+
+@media (min-width: 576px) {
+  .footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-left {
+    width: 50%;
+  }
+
+  .footer-middle {
+    flex-grow: 1;
+    text-align: center;
+    margin: 30px 0 0 0;
+  }
+
+  .footer-right {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 0 30px;
+    font-size: 0.875em;
+  }
+
+  .footer-content {
+    flex-wrap: nowrap;
+    margin: 45px auto 60px auto;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .footer-middle {
+    order: 0;
+    margin-top: 0;
+    padding-bottom: 15px;
+  }
+
+  .footer-right {
+    margin:0;
+  }
+}
