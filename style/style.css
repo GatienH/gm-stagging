@@ -223,6 +223,7 @@ h1 {
 .offer {
   background-color: #fff;
   width: 100%;
+  padding-bottom: 55px;
 }
 
 .offer-details {
@@ -297,7 +298,7 @@ h1 {
 
 .btn {
   text-align: center;
-  margin: 75px auto 0 auto;
+  margin: 40px auto 0 auto;
   font-weight: 700;
 }
 
@@ -365,6 +366,10 @@ h1 {
 }
 
 @media (min-width: 768px) {
+  .offer {
+    padding-bottom: 110px;
+  }
+
   .offer-details {
     margin: 0 30px;
   }
@@ -399,6 +404,10 @@ h1 {
     margin-left: 36px;
   }
 
+  .btn {
+    margin-top: 80px;
+  }
+
   .btn, .btn svg {
     height: 52px;
     width: 232px;
@@ -424,7 +433,7 @@ h1 {
 .watermark {
   background: url(../img/ref_filigranne_fr.png) center no-repeat;
   background-size: contain;
-  margin: 31px 15px 38px 15px;
+  margin: 22px 30px 32px 30px;
 }
 
 .referees-list {
@@ -451,13 +460,13 @@ h1 {
 
 @media (min-width: 576px) {
   .watermark {
-    margin: 63px 15px 77px 15px;
+    margin: 44px 30px 65px 30px;
   }
 }
 
 @media (min-width: 768px) {
   .watermark {
-    margin: 125px 30px 155px 30px;
+    margin: 88px 30px 130px 30px;
   }
 
   .referees-list {
@@ -586,6 +595,10 @@ footer a:hover {
   margin-top: 264px;
 }
 
+#offer-home .offer-details {
+  margin-top: 22px;
+}
+
 #stamp-home {
   max-width: 1200px;
   height: 108px;
@@ -624,6 +637,10 @@ footer a:hover {
 
   #offer-home {
     margin-top: 528px;
+  }
+
+  #offer-home .offer-details {
+    margin-top: 44px;
   }
 
   #stamp-home {
@@ -769,8 +786,7 @@ footer a:hover {
 
 #offer-hiring {
   margin-top: 264px;
-  padding-top: 50px;
-  padding-bottom: 0;
+  padding-top: 35px;
 }
 
 #offer-hiring .offer-details {
@@ -842,6 +858,7 @@ footer a:hover {
 @media (min-width: 768px) {
   #offer-hiring {
     margin-top: 528px;
+    padding-top: 70px;
   }
 
   #methodo div {
@@ -883,6 +900,6 @@ footer a:hover {
 
 @media (min-width: 1260px) {
   #methodo div {
-    margin: 0 auto;
+    margin: 0 auto 200px;
   }
 }
