@@ -25,15 +25,15 @@ class HeaderBar extends HTMLElement {
         ['hiring',
           ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
         ],
-        ['page4',
-          ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN']
-        ],
-        ['page5',
-          ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN']
-        ],
-        ['contact-us',
-          ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us']
-        ]
+        // ['page4',
+        //   ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN']
+        // ],
+        // ['page5',
+        //   ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN']
+        // ],
+        // ['contact-us',
+        //   ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us']
+        // ]
       ];
 
     // *********************************************
@@ -120,9 +120,15 @@ class HeaderBar extends HTMLElement {
 
     burger.innerHTML = 
     `<svg width="34" height="22" viewBox="0 0 68 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="67.8359" y1="41.6432" x2="-8.04962e-08" y2="41.6432" stroke="#252377" stroke-width="3"/>
-      <line x1="67.8359" y1="22.0065" x2="-1.02285e-07" y2="22.0065" stroke="#252377" stroke-width="3"/>
-      <line x1="67.8359" y1="2.36975" x2="-1.02285e-07" y2="2.36974" stroke="#252377" stroke-width="3"/>
+      <g id="burger-icon" stroke="#252377" stroke-width="4">
+        <line x1="67.8359" y1="41.2734" x2="-1.07328e-07" y2="41.2734"/>
+        <line x1="67.8359" y1="21.6367" x2="-1.3638e-07" y2="21.6367"/>
+        <line x1="67.8359" y1="2" x2="-1.3638e-07" y2="1.99999"/>
+      </g>
+      <g id="close-icon" fill="#252377" class="hidden">
+        <rect x="25" y="40" width="56.2185" height="4.29476" transform="rotate(-45 25 40)"/>
+        <rect x="65" y="43" width="56.2185" height="4.29476" transform="rotate(-135 65 43)"/>
+      </g>
     </svg>`;
 
     // build structure
@@ -141,21 +147,22 @@ class HeaderBar extends HTMLElement {
   setNav() {
     // create html elements
     const nav = document.createElement('nav');
-    const closeMenu = document.createElement('div');
+    // const closeMenu = document.createElement('div');
 
     // set ids and class
-    nav.setAttribute('class', 'hidden');
-    closeMenu.setAttribute('class', 'menu-toggle');
+    nav.setAttribute('class', 'hidden nav-bg-grey');
+    // nav.setAttribute('class', 'menu-toggle hidden nav-bg-grey');
+    // closeMenu.setAttribute('class', 'menu-toggle');
 
     // add content and images
-    closeMenu.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-      </svg>
-    `;
+    // closeMenu.innerHTML = `
+    //   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+    //     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    //   </svg>
+    // `;
 
     // build structure
-    nav.appendChild(closeMenu);
+    // nav.appendChild(closeMenu);
     
     return nav;
   }
@@ -168,6 +175,8 @@ class HeaderBar extends HTMLElement {
     pages.forEach( e => {
       const navElmt = document.createElement('li');
       const navLink = document.createElement('a');
+      
+      const navSpan = document.createElement('span');
 
       // navLink.setAttribute('href', `${path}${e[lgs.indexOf(lg) + 1][0]}`);
       navLink.setAttribute('href', e[lgs.indexOf(lg) + 1][0]);
@@ -177,7 +186,10 @@ class HeaderBar extends HTMLElement {
       }
 
       navLink.textContent = e[lgs.indexOf(lg) + 1][1];
-      navList.appendChild(navElmt).appendChild(navLink);
+      // navList.appendChild(navElmt).appendChild(navLink);
+
+      // navSpan.textContent = "coucou";
+      navList.appendChild(navElmt).appendChild(navLink).appendChild(navSpan);
     });
 
     return navList;
@@ -224,17 +236,23 @@ class HeaderBar extends HTMLElement {
     const html = document.querySelector("html");
     const body = document.querySelector("body");
     const nav = document.querySelector("nav");
+    const burgerIcon = document.querySelector("#burger-icon");
+    const closeIcon = document.querySelector("#close-icon");
 
     // check for optims
     html.classList.toggle("overflow-y-hiden");
     body.classList.toggle("overflow-y-hiden");
     nav.classList.toggle("hidden");
+    // nav.classList.toggle("nav-bg-grey");
+    burgerIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
   }
 }
 
 customElements.define('header-bar', HeaderBar);
 
 const header = document.querySelector('header');
+const nav = document.querySelector('nav');
 
 function onWindowScroll(event) {
   var headerHeight = document.querySelector('header').offsetHeight;
@@ -246,16 +264,22 @@ function onWindowScroll(event) {
     header.classList.add('bg-white');
     header.classList.remove('bg-img');
     header.classList.remove('bg-grey');
+    nav.classList.add("nav-bg-white");
+    nav.classList.remove("nav-bg-grey");
 
     if (window.pageYOffset > whiteBgEnd - headerHeight) {
       header.classList.add('bg-grey');
-      header.classList.remove('bg-white');  
+      header.classList.remove('bg-white');
+      nav.classList.add("nav-bg-grey");
+      nav.classList.remove("nav-bg-white");
     }
   }
   else {
     header.classList.add('bg-grey');
     header.classList.add('bg-img');
     header.classList.remove('bg-white');
+    nav.classList.add("nav-bg-grey");
+    nav.classList.remove("nav-bg-white");
   }
 }
 
