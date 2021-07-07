@@ -150,8 +150,8 @@ class HeaderBar extends HTMLElement {
     // const closeMenu = document.createElement('div');
 
     // set ids and class
-    // nav.setAttribute('class', 'hidden nav-bg-grey');
-    nav.setAttribute('class', 'menu-toggle hidden nav-bg-grey');
+    nav.setAttribute('class', 'hidden nav-bg-grey');
+    // nav.setAttribute('class', 'menu-toggle hidden nav-bg-grey');
     // closeMenu.setAttribute('class', 'menu-toggle');
 
     // add content and images
