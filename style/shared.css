@@ -365,6 +365,7 @@ h1 {
   text-align: center;
   margin: 40px auto 0 auto;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .btn, .btn svg {
