@@ -43,10 +43,12 @@
 
 #methodo ul {
   font-weight: 500;
+  padding: 0;
 }
 
 #methodo li {
-  margin: 1em auto;
+  margin: 1em 15px;
+
 }
 
 @media (min-width: 400px) {
@@ -65,7 +67,7 @@
   }
 
   #methodo li {
-    margin: 1.2em auto;
+    margin: 1.2em 20px;
   }
 }
 
@@ -92,7 +94,7 @@
   }
 
   #methodo li {
-    margin: 1.4em auto;
+    margin: 1.4em 20px;
   }
 }
 
@@ -109,6 +111,10 @@
 
   #methodo .methodo-title {
     font-size: 8.625em;
+  }
+
+  #methodo li {
+    margin: 1.4em 30px;
   }
 }
 
