@@ -147,23 +147,10 @@ class HeaderBar extends HTMLElement {
   setNav() {
     // create html elements
     const nav = document.createElement('nav');
-    // const closeMenu = document.createElement('div');
 
     // set ids and class
-    nav.setAttribute('class', 'hidden nav-bg-grey');
-    // nav.setAttribute('class', 'menu-toggle hidden nav-bg-grey');
-    // closeMenu.setAttribute('class', 'menu-toggle');
+    nav.setAttribute('class', 'hidden');
 
-    // add content and images
-    // closeMenu.innerHTML = `
-    //   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-    //     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-    //   </svg>
-    // `;
-
-    // build structure
-    // nav.appendChild(closeMenu);
-    
     return nav;
   }
 
@@ -186,9 +173,6 @@ class HeaderBar extends HTMLElement {
       }
 
       navLink.textContent = e[lgs.indexOf(lg) + 1][1];
-      // navList.appendChild(navElmt).appendChild(navLink);
-
-      // navSpan.textContent = "coucou";
       navList.appendChild(navElmt).appendChild(navLink).appendChild(navSpan);
     });
 
@@ -243,7 +227,6 @@ class HeaderBar extends HTMLElement {
     html.classList.toggle("overflow-y-hiden");
     body.classList.toggle("overflow-y-hiden");
     nav.classList.toggle("hidden");
-    // nav.classList.toggle("nav-bg-grey");
     burgerIcon.classList.toggle("hidden");
     closeIcon.classList.toggle("hidden");
   }
@@ -252,7 +235,6 @@ class HeaderBar extends HTMLElement {
 customElements.define('header-bar', HeaderBar);
 
 const header = document.querySelector('header');
-const nav = document.querySelector('nav');
 
 function onWindowScroll(event) {
   var headerHeight = document.querySelector('header').offsetHeight;
@@ -264,22 +246,16 @@ function onWindowScroll(event) {
     header.classList.add('bg-white');
     header.classList.remove('bg-img');
     header.classList.remove('bg-grey');
-    nav.classList.add("nav-bg-white");
-    nav.classList.remove("nav-bg-grey");
 
     if (window.pageYOffset > whiteBgEnd - headerHeight) {
       header.classList.add('bg-grey');
       header.classList.remove('bg-white');
-      nav.classList.add("nav-bg-grey");
-      nav.classList.remove("nav-bg-white");
     }
   }
   else {
     header.classList.add('bg-grey');
     header.classList.add('bg-img');
     header.classList.remove('bg-white');
-    nav.classList.add("nav-bg-grey");
-    nav.classList.remove("nav-bg-white");
   }
 }
 
