@@ -26,7 +26,7 @@ body {
 .overflow-y-hiden {
   overflow-y: hidden;
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* ################################ */
@@ -76,31 +76,69 @@ header {
   margin-left: 40px;
 } */
 
+#burger {
+  display: flex;
+  z-index: 1000;
+}
+
+#burger:hover {
+  cursor: pointer;
+}
+
 nav {
   position: absolute;
-  left:0;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  background-color:rgb(255, 255, 255, 0.9);
 }
 
 .hidden {
   visibility: hidden;
 }
 
-/* #close {
-  background-color: sienna;
-} */
+nav ul {
+  margin: 0 15px;
+  padding: 0;
+  list-style-type: none;
+}
 
-/* .menu-items {
-  background-color: slateblue;
-} */
+nav li {
+  margin: 15px 0;
+}
+
+nav li a {
+  display: block;
+  margin: 0 auto;
+  width: max-content;
+  color: #252377;
+  text-decoration: none;
+}
+
+nav li span {
+  display: block;
+  background-color:#22FFCA;
+  height: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+nav li a:hover span {
+  width: 100%;
+}
 
 .active {
-  color: red;
+  font-weight: 800;
+}
+
+.active span {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -110,6 +148,14 @@ nav {
 
   #header {
     margin: 50px 30px 30px 30px;
+  }
+
+  nav {
+    font-size: 2.5em;
+  }
+
+  nav ul {
+    margin: 0 30px;
   }
   
   #brand svg {
