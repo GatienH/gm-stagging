@@ -560,6 +560,7 @@ footer a:hover {
 .footer-middle {
   align-self: center;
   order: 3;
+  height: 40px;
 }
 
 .footer-right {
@@ -579,7 +580,7 @@ footer a:hover {
   .footer-middle {
     flex-grow: 1;
     text-align: center;
-    margin: 30px 0 0 0;
+    margin-top: 30px;
   }
 
   .footer-right {
@@ -609,7 +610,6 @@ footer a:hover {
   .footer-middle {
     order: 0;
     margin-top: 0;
-    padding-bottom: 15px;
   }
 
   .footer-right {
