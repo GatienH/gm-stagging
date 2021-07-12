@@ -48,9 +48,9 @@ header {
 }
 
 .bg-img {
-  background: url(../img/m_char.svg) top right no-repeat;
+  background: url(../img/m_char_header.svg) top right no-repeat;
   background-attachment: fixed;
-  background-size: auto 264px;
+  background-size: auto 87px;
 }
 
 .bg-white {
