@@ -215,6 +215,7 @@ h2 {
 }
 
 .separator {
+  width: 100%;
   background-color: #fff;
   text-align: center;
 }
@@ -247,15 +248,15 @@ h2 {
   width: 100%;
 }
 
-.stamp img {
+/* .stamp img {
   -webkit-animation: rotating 20s linear infinite;
   -moz-animation: rotating 20s linear infinite;
   -ms-animation: rotating 20s linear infinite;
   -o-animation: rotating 20s linear infinite;
   animation: rotating 20s linear infinite;
-}
+} */
 
-@-webkit-keyframes rotating {
+/* @-webkit-keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -283,7 +284,7 @@ h2 {
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
-}
+} */
 
 /* ## Offer                      ## */
 /* ################################ */
