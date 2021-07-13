@@ -220,6 +220,11 @@ h2 {
   text-align: center;
 }
 
+.separator span {
+  display: block;
+  border-bottom: solid 3px #22FFCA;
+}
+
 @media (min-width: 768px) {
   .page-title {
     top: 200px;

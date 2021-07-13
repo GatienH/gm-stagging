@@ -1,6 +1,17 @@
+#stamp-hiring {
+  position: absolute;
+  top: 225px;
+  text-align: center;
+}
+
+#stamp-hiring img {
+  width: 78px;
+  margin-bottom: 20px;
+}
+
 #offer-hiring {
   margin-top: 264px;
-  padding-top: 35px;
+  padding-top: 55px;
 }
 
 #offer-hiring .offer-details {
@@ -42,6 +53,11 @@
   border-bottom: solid 3px #22FFCA;
 }
 
+#methodo .methodo-title:first-child {
+  padding-top: 20px;
+  border-top: solid 3px #22FFCA;
+}
+
 #methodo ul {
   font-weight: 500;
   padding: 0;
@@ -73,10 +89,22 @@
 }
 
 @media (min-width: 768px) {
+  #stamp-hiring {
+    top: 450px;
+  }
+
+  #stamp-hiring img {
+    width: 157px;
+  }
+
   #offer-hiring {
     margin-top: 528px;
-    padding-top: 70px;
+    padding-top: 90px;
   }
+
+  /* #about-separator span {
+    margin: 0 30px;
+  } */
 
   #methodo div {
     margin: 0 30px 200px;

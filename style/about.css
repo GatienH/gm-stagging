@@ -42,11 +42,9 @@
   margin: 0 15px 1em 15px;
 }
 
-.about-separator span {
-  display: block;
+#about-separator span {
   margin: 0 15px;
   max-width: 1200px;
-  border-bottom: solid 3px #22FFCA;
 }
 
 #offer-about {
@@ -90,7 +88,7 @@
     margin-left: 66px;
   }
 
-  .about-separator span {
+  #about-separator span {
     margin: 0 30px;
   }
 }
@@ -104,7 +102,7 @@
     margin-left: 160px;
   }
 
-  .about-separator span {
+  #about-separator span {
     margin: auto;
   }
 }
