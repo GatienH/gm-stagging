@@ -193,14 +193,21 @@ h1 {
   top: 100px;
   width: 100%;
   margin-top: 0;
-  font-weight: 300;
   font-size: 3.063em;
 }
+
+h2, .page-title {
+  font-weight: 300;
+}
   
-.page-title p {
-  max-width: 1200px;
+h2, .page-title p {
   margin: 0 15px;
+  max-width: 1200px;
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.75em;
 }
 
 @media (min-width: 768px) {
@@ -209,13 +216,17 @@ h1 {
     font-size: 6.125em;
   }
 
-  .page-title p {
+  h2, .page-title p {
     margin: 0 30px;
+  }
+
+  h2 {
+    font-size: 3em;
   }
 }
 
 @media (min-width: 1260px) {
-  .page-title p {
+  h2, .page-title p {
     margin: 0 auto;
   }
 }
@@ -277,7 +288,7 @@ h1 {
 .offer-details {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 15px;
+  margin: 20px 15px 0;
 }
 
 .mngt {
@@ -360,13 +371,21 @@ h1 {
   text-anchor: middle;
 }
 
-.btn a:hover .on {
+.btn a:hover .btn-bg {
+  fill:#22FFCA;
+}
+
+.btn a:hover .btn-gap {
+  stroke:#22FFCA;
+}
+
+/* .btn a:hover .on {
   stroke:#22FFCA;
 }
 
 .btn a:hover .off {
   stroke:#fff;
-}
+} */
 
 @media (min-width: 576px) {
   .offer-details {
@@ -420,7 +439,7 @@ h1 {
   }
 
   .offer-details {
-    margin: 0 30px;
+    margin: 20px 30px 0;
   }
 
   .number {
@@ -465,7 +484,7 @@ h1 {
 
 @media (min-width: 1260px) {
   .offer-details {
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 }
 
