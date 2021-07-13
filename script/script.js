@@ -149,7 +149,7 @@ class HeaderBar extends HTMLElement {
     const nav = document.createElement('nav');
 
     // set ids and class
-    nav.setAttribute('class', 'hidden');
+    nav.setAttribute('class', 'menu-toggle hidden');
 
     return nav;
   }
