@@ -1,28 +1,42 @@
-#home-title {
-  top: 137px;
-  margin: 0 15px;
-  text-align: center;
-  font-weight: 700;
-  font-size:1.2em;
-}
-
-#home-title p {
-  margin: 0;
-}
-
-#home-title p:last-child {
-  margin-top: 15px;
-}
-
-#offer-home {
+#claim {
+  background-color: #fff;
   margin-top: 264px;
+  margin-bottom: -145px;
+  width: 100%;
 }
 
-/* #offer-home .offer-details {
-  margin-top: 22px;
-} */
+#claim h1, #claim p {
+  position: relative;
+  top: -145px;
+  margin: 0 15px;
+  font-weight: 700;
+  text-align: center;
+}
 
-#stamp-home {
+#claim h1 {
+  line-height: 137.5%;
+}
+
+#claim p {
+  line-height: 165%;
+}
+
+#claim h1 {
+  font-size: 1.5em;
+}
+
+#claim p {
+  margin-top: 25px;
+  font-size: 1.2em;
+}
+
+.home-separator {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+/* #stamp-home {
   max-width: 1200px;
   height: 108px;
   margin: 15px auto;
@@ -31,62 +45,82 @@
 #stamp-home img {
   margin-left: 37px;
   height: 108px;
-}
+} */
 
 @media (min-width: 567px) {
-  #home-title {
-    font-size: 1.5em;
-  }
-
-  #stamp-home {
+  /* #stamp-home {
     height: 144px;
   }
 
   #stamp-home img {
     height: 144px;
-  }
+  } */
 }
 
 @media (min-width: 768px) {
-  #home-title {
-    top: 275px;
-    margin: 0 30px;
-    font-size: 2em;
-  }
-
-  #home-title p:last-child {
-    margin-top: 30px;
-  }
-
-  #offer-home {
+  #claim {
     margin-top: 528px;
+    margin-bottom: -280px;
   }
 
-  /* #offer-home .offer-details {
-    margin-top: 44px;
-  } */
+  #claim h1, #claim p {
+    top: -280px;
+    margin: 0 30px;
+  }
 
-  #stamp-home {
+  #claim h1 {
+    font-size: 2.3em;
+  }
+
+  #claim p {
+    margin-top: 50px;
+    font-size: 1.75em;
+  }
+
+  .home-separator {
+    margin-top: 100px;
+  }
+
+  .home-separator svg {
+    width: 25px;
+    height: 84px;
+  }
+
+  /* #stamp-home {
     margin-top: 30px;
     margin-bottom: 30px;
   }
 
   #stamp-home img {
     margin-left: 75px;
+  } */
+}
+
+@media (min-width: 989px) {
+  #claim {
+    margin-bottom: -310px;
+  }
+
+  #claim h1, #claim p {
+    top: -310px;
+    max-width: 929px;
+  }
+
+  #claim h1, #claim p {
+    margin: auto;
+  }
+
+  #claim h1 {
+    font-size: 2.5em;
+  }
+
+  #claim p {
+    margin-top: 50px;
+    font-size: 1.875em;
   }
 }
 
-@media (min-width: 800px) {
-  #home-title {
-    font-size: 2.2em;
-  }
-}
-
-@media (min-width: 992px) {
-  #home-title {
-    font-size: 2.8em;
-  }
-
+/* @media (min-width: 992px) {
   #stamp-home {
     height: 216px;
     margin-top: 30px;
@@ -96,4 +130,4 @@
   #stamp-home img {
     height: 216px;
   }
-}
+} */

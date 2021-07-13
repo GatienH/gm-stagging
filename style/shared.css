@@ -183,13 +183,17 @@ main {
   flex-direction: column;
 }
 
-h1 {
+/* h1 {
   position: absolute;
   z-index: 500;
   line-height: 132.4%;
-}
+} */
 
 .page-title {
+  position: absolute;
+  z-index: 500;
+  line-height: 132.4%;
+
   top: 100px;
   width: 100%;
   margin-top: 0;
@@ -208,6 +212,11 @@ h2, .page-title p {
 
 h2 {
   font-size: 1.75em;
+}
+
+.separator {
+  background-color: #fff;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
