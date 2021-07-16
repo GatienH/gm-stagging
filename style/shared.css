@@ -502,14 +502,13 @@ h2 {
 /* ################################ */
 
 :root {
-  --nb-logos: 24;
-  --top-list-duration: 120s;
-  --bottom-list-duration: 180s;
+  /* --nb-logos: 15; */
+  --top-list-duration: 15s;
+  --bottom-list-duration: 15s;
  }
 
 .referees {
   background-color: #F1F1F1;
-  width:100%;
 }
 .watermark {
   background: url(../img/ref_filigranne_fr.png) center no-repeat;
@@ -522,37 +521,77 @@ h2 {
   /* margin: 22px 30px 32px 30px; */
   /* margin: 0 15px; */
   /* max-height: 250px; */
+
+  width: 100vw;
+  /* overflow: hidden; */
 }
 
 .referees-list, .referees-list div, .referees-list img {
   max-height: 50px;
 }
 
+.referees-list div, .referees-list img {
+  max-width: 210px;
+}
+
 .referees-list {
-  /* background-color: seagreen; */
+  background-color: seagreen;
+  width: max-content;
   display: flex;
-  overflow: hidden;
   padding: 20px 0;
 }
 
-.referees-list div {
+/* .top-list, .test-list { */
+.top-list {
+  /* width: max-content; */
+  /* width: calc(max-content / 3); */
+}
+
+.top-list div {
+  /* left: calc(-100% + 120.5vw); */
+}
+
+/* .test-list div {
+  left: calc(-100% + 100vw);
+} */
+
+/* //////////////////////// */
+
+/* .referees-list div {
   width: calc(33.333% - 20px);
+} */
+
+/* //////////////////////// */
+
+.referees-list div {
+  /* width: calc(33.333% - 20px);
   margin: 0 10px;
+  flex-shrink: 0;
+  align-self: center;
+  position: relative; */
+
+  background-color: skyblue;
+  /* width: calc(33.333% - 20px); */
+
+  /* max-width: calc(33.333% - 20px); */
+
+  margin: 0 30px;
+  /* margin:0; */
   flex-shrink: 0;
   align-self: center;
   position: relative;
 }
 
 .bottom-list {
-  justify-content: flex-end;
+  /* justify-content: flex-start; */
 }
 
 .top-list div {
-  animation: slideshowLR-3 var(--top-list-duration) linear infinite;
+  animation: slideshowLR-50 var(--top-list-duration) linear infinite;
 }
 
 .bottom-list div {
-  animation: slideshowRL-3 var(--bottom-list-duration) linear infinite;
+  animation: slideshowRL-50 var(--bottom-list-duration) linear infinite;
 }
 
 .referees-list img {
@@ -563,47 +602,60 @@ h2 {
 }
 
 .logo-display4, .logo-display5, .logo-display6 {
-  display: none;
+  /* display: none; */
 } 
 
-@keyframes slideshowLR-3 {
+/* //////////////////////// */
+
+/* @keyframes slideshowLR-3 {
   0%    { left: 0; }
   100%  { left: calc(var(--nb-logos) / 3 * -100%); }
+} */
+
+/* //////////////////////// */
+
+/* default < 576 */
+@keyframes slideshowLR-50 {
+  0%    { left: 0; }
+  100%  { left: calc(-100% + 977px); }
 }
 
-@keyframes slideshowLR-4 {
-  0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 4 * -100%); }
+@keyframes slideshowRL-50 {
+  0%    { left: calc(-100% + 977px); }
+  100%  { left: 0; }
 }
 
-@keyframes slideshowLR-5 {
+/* > 576 < 768 */
+@keyframes slideshowLR-70 {
   0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 5 * -100%); }
+  100%  { left: calc(-100% + 1147px); }
 }
 
-@keyframes slideshowLR-6 {
-  0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 6 * -100%); }
+@keyframes slideshowRL-70 {
+  0%    { left: calc(-100% + 1147px); }
+  100%  { left: 0; }
 }
 
-@keyframes slideshowRL-3 {
+/* > 768 < 992 */
+@keyframes slideshowLR-90 {
   0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 3 * 100%); }
+  100%  { left: calc(-100% + 1297px); }
 }
 
-@keyframes slideshowRL-4 {
-  0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 4 * 100%); }
+@keyframes slideshowRL-90 {
+  0%    { left: calc(-100% + 1297px); }
+  100%  { left: 0; }
 }
 
-@keyframes slideshowRL-5 {
+/* > 992 */
+@keyframes slideshowLR-110 {
   0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 5 * 100%); }
+  100%  { left: calc(-100% + 1407px); }
 }
 
-@keyframes slideshowRL-6 {
-  0%    { left: 0; }
-  100%  { left: calc(var(--nb-logos) / 6 * 100%); }
+@keyframes slideshowRL-110 {
+  0%    { left: calc(-100% + 1407px); }
+  100%  { left: 0; }
 }
 
 @media (min-width: 576px) {
@@ -612,19 +664,19 @@ h2 {
   }
   
   .referees-list div {
-    width: calc(25% - 20px);
+    /* width: calc(25% - 20px); */
   }
 
   .logo-display4 {
-    display: revert;
+    /* display: revert; */
   }
 
   .top-list div {
-    animation: slideshowLR-4 var(--top-list-duration) linear infinite;
+    animation: slideshowLR-70 var(--top-list-duration) linear infinite;
   }
 
   .bottom-list div {
-    animation: slideshowRL-4 var(--bottom-list-duration) linear infinite;
+    animation: slideshowRL-70 var(--bottom-list-duration) linear infinite;
   }
 
   /* .watermark {
@@ -635,6 +687,14 @@ h2 {
 @media (min-width: 768px) {
   .referees-list, .referees-list div, .referees-list img {
     max-height: 90px;
+  }
+
+  .top-list div {
+    animation: slideshowLR-90 var(--top-list-duration) linear infinite;
+  }
+
+  .bottom-list div {
+    animation: slideshowRL-90 var(--bottom-list-duration) linear infinite;
   }
 
   .referees-list {
@@ -657,26 +717,32 @@ h2 {
 
 @media (min-width: 992px) {
   .referees-list, .referees-list div, .referees-list img {
-    max-height: 112px;
+    max-height: 110px;
+  }
+
+  .top-list div {
+    animation: slideshowLR-110 var(--top-list-duration) linear infinite;
+  }
+
+  .bottom-list div {
+    animation: slideshowRL-110 var(--bottom-list-duration) linear infinite;
   }
 }
 
 @media (min-width: 1200px) {
   .referees-list div {
-    width: calc(20% - 20px);
+    /* width: calc(20% - 20px); */
   }
 
   .logo-display5 {
-    display: revert;
+    /* display: revert; */
   }
 
   .top-list div {
-    animation: slideshowLR-5 var(--top-list-duration) linear infinite;
+    /* animation: slideshowLR-5 var(--top-list-duration) linear infinite; */
   }
 
-  .bottom-list div {
-    animation: slideshowRL-5 var(--bottom-list-duration) linear infinite;
-  }
+  
 }
 
 @media (min-width: 1260px) {
@@ -692,19 +758,19 @@ h2 {
 
 @media (min-width: 1400px) {
   .referees-list div {
-    width: calc(16.666% - 20px);
+    /* width: calc(16.666% - 20px); */
   }
 
   .logo-display6 {
-    display: revert;
+    /* display: revert; */
   }
 
   .top-list div {
-    animation: slideshowLR-6 var(--top-list-duration) linear infinite;
+    /* animation: slideshowLR-6 var(--top-list-duration) linear infinite; */
   }
 
   .bottom-list div {
-    animation: slideshowRL-6 var(--bottom-list-duration) linear infinite;
+    animation: slideshowRL-50 var(--bottom-list-duration) linear infinite;
   }
 }
 
