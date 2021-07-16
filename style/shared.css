@@ -503,27 +503,20 @@ h2 {
 
 :root {
   /* --nb-logos: 15; */
-  --top-list-duration: 15s;
-  --bottom-list-duration: 15s;
+  --top-list-duration: 80s;
+  --bottom-list-duration: 100s;
  }
 
 .referees {
   background-color: #F1F1F1;
 }
+
 .watermark {
   background: url(../img/ref_filigranne_fr.png) center no-repeat;
-  background-size: contain;
-  
-
-  /* margin-top: 90px;
-  margin-bottom: 110px; */
-
-  /* margin: 22px 30px 32px 30px; */
-  /* margin: 0 15px; */
-  /* max-height: 250px; */
-
+  background-size: auto 100%;
   width: 100vw;
-  /* overflow: hidden; */
+  margin: 30px 15px 40px;
+  overflow: hidden;
 }
 
 .referees-list, .referees-list div, .referees-list img {
@@ -535,55 +528,18 @@ h2 {
 }
 
 .referees-list {
-  background-color: seagreen;
   width: max-content;
   display: flex;
-  padding: 20px 0;
+  /* padding: 20px 0; */
+  padding: 10px 0;
 }
-
-/* .top-list, .test-list { */
-.top-list {
-  /* width: max-content; */
-  /* width: calc(max-content / 3); */
-}
-
-.top-list div {
-  /* left: calc(-100% + 120.5vw); */
-}
-
-/* .test-list div {
-  left: calc(-100% + 100vw);
-} */
-
-/* //////////////////////// */
-
-/* .referees-list div {
-  width: calc(33.333% - 20px);
-} */
-
-/* //////////////////////// */
 
 .referees-list div {
-  /* width: calc(33.333% - 20px);
-  margin: 0 10px;
-  flex-shrink: 0;
-  align-self: center;
-  position: relative; */
-
-  background-color: skyblue;
   /* width: calc(33.333% - 20px); */
-
-  /* max-width: calc(33.333% - 20px); */
-
+  position: relative;
   margin: 0 30px;
-  /* margin:0; */
   flex-shrink: 0;
   align-self: center;
-  position: relative;
-}
-
-.bottom-list {
-  /* justify-content: flex-start; */
 }
 
 .top-list div {
@@ -595,24 +551,95 @@ h2 {
 }
 
 .referees-list img {
-  /* background-color: salmon; */
   display: block;
-  max-width: 100%;
   margin: auto;
+  max-width: 100%;
 }
 
-.logo-display4, .logo-display5, .logo-display6 {
-  /* display: none; */
-} 
+@media (min-width: 576px) {
+  .watermark {
+    margin: 50px 15px 60px;
+  }
+  
+  .referees-list, .referees-list div, .referees-list img {
+    max-height: 70px;
+  }
 
-/* //////////////////////// */
+  .top-list {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .bottom-list {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .top-list div {
+    animation: slideshowLR-70 var(--top-list-duration) linear infinite;
+  }
+
+  .bottom-list div {
+    animation: slideshowRL-70 var(--bottom-list-duration) linear infinite;
+  }
+}
+
+@media (min-width: 768px) {
+  .watermark {
+    margin: 70px 15px 80px;
+  }
+
+  .referees-list, .referees-list div, .referees-list img {
+    max-height: 90px;
+  }
+
+  .top-list {
+    padding-top: 50px;
+  }
+  
+  .bottom-list {
+    padding-bottom: 30px;
+  }
+
+  .top-list div {
+    animation: slideshowLR-90 var(--top-list-duration) linear infinite;
+  }
+
+  .bottom-list div {
+    animation: slideshowRL-90 var(--bottom-list-duration) linear infinite;
+  }
+}
+
+@media (min-width: 992px) {
+  .watermark {
+    margin: 90px 15px 110px;
+  }
+
+  .referees-list, .referees-list div, .referees-list img {
+    max-height: 110px;
+  }
+
+  .top-list {
+    padding-top: 70px;
+  }
+  
+  .bottom-list {
+    padding-bottom: 50px;
+  }
+
+  .top-list div {
+    animation: slideshowLR-110 var(--top-list-duration) linear infinite;
+  }
+
+  .bottom-list div {
+    animation: slideshowRL-110 var(--bottom-list-duration) linear infinite;
+  }
+}
 
 /* @keyframes slideshowLR-3 {
   0%    { left: 0; }
   100%  { left: calc(var(--nb-logos) / 3 * -100%); }
 } */
-
-/* //////////////////////// */
 
 /* default < 576 */
 @keyframes slideshowLR-50 {
@@ -656,122 +683,6 @@ h2 {
 @keyframes slideshowRL-110 {
   0%    { left: calc(-100% + 1407px); }
   100%  { left: 0; }
-}
-
-@media (min-width: 576px) {
-  .referees-list, .referees-list div, .referees-list img {
-    max-height: 70px;
-  }
-  
-  .referees-list div {
-    /* width: calc(25% - 20px); */
-  }
-
-  .logo-display4 {
-    /* display: revert; */
-  }
-
-  .top-list div {
-    animation: slideshowLR-70 var(--top-list-duration) linear infinite;
-  }
-
-  .bottom-list div {
-    animation: slideshowRL-70 var(--bottom-list-duration) linear infinite;
-  }
-
-  /* .watermark {
-    margin: 44px 30px 65px 30px;
-  } */
-}
-
-@media (min-width: 768px) {
-  .referees-list, .referees-list div, .referees-list img {
-    max-height: 90px;
-  }
-
-  .top-list div {
-    animation: slideshowLR-90 var(--top-list-duration) linear infinite;
-  }
-
-  .bottom-list div {
-    animation: slideshowRL-90 var(--bottom-list-duration) linear infinite;
-  }
-
-  .referees-list {
-    /* margin: 0 15px; */
-  }
-
-  .watermark {
-    /* margin: 88px 30px 130px 30px; */
-    /* margin: 0 30px; */
-  }
-
-  /* .watermark {
-    margin: 88px 30px 130px 30px;
-  } */
-
-  /* .referees-list {
-    margin: 30px auto;
-  } */
-}
-
-@media (min-width: 992px) {
-  .referees-list, .referees-list div, .referees-list img {
-    max-height: 110px;
-  }
-
-  .top-list div {
-    animation: slideshowLR-110 var(--top-list-duration) linear infinite;
-  }
-
-  .bottom-list div {
-    animation: slideshowRL-110 var(--bottom-list-duration) linear infinite;
-  }
-}
-
-@media (min-width: 1200px) {
-  .referees-list div {
-    /* width: calc(20% - 20px); */
-  }
-
-  .logo-display5 {
-    /* display: revert; */
-  }
-
-  .top-list div {
-    /* animation: slideshowLR-5 var(--top-list-duration) linear infinite; */
-  }
-
-  
-}
-
-@media (min-width: 1260px) {
-  .referees-list {
-    /* margin: auto; */
-  }
-
-  .watermark {
-    /* margin: 88px 30px 130px 30px; */
-    /* margin: auto; */
-  }
-}
-
-@media (min-width: 1400px) {
-  .referees-list div {
-    /* width: calc(16.666% - 20px); */
-  }
-
-  .logo-display6 {
-    /* display: revert; */
-  }
-
-  .top-list div {
-    /* animation: slideshowLR-6 var(--top-list-duration) linear infinite; */
-  }
-
-  .bottom-list div {
-    animation: slideshowRL-50 var(--bottom-list-duration) linear infinite;
-  }
 }
 
 /* ################################ */
