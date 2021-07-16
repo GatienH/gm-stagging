@@ -515,15 +515,15 @@ h2 {
   background: url(../img/ref_filigranne_fr.png) center no-repeat;
   background-size: auto 100%;
   width: 100vw;
-  margin: 30px 15px 40px;
+  margin: 30px 0 40px;
   overflow: hidden;
 }
 
-.referees-list, .referees-list div, .referees-list img {
+.referees-list, .referees-list a, .referees-list img {
   max-height: 50px;
 }
 
-.referees-list div, .referees-list img {
+.referees-list a, .referees-list img {
   max-width: 210px;
 }
 
@@ -533,7 +533,11 @@ h2 {
   padding: 10px 0;
 }
 
-.referees-list div {
+.referees-list:hover a {
+  animation-play-state: paused
+}
+
+.referees-list a {
   /* width: calc(33.333% - 20px); */
   position: relative;
   margin: 0 30px;
@@ -541,11 +545,11 @@ h2 {
   align-self: center;
 }
 
-.top-list div {
+.top-list a {
   animation: slideshowLR-50 var(--top-list-duration) linear infinite;
 }
 
-.bottom-list div {
+.bottom-list a {
   animation: slideshowRL-50 var(--bottom-list-duration) linear infinite;
 }
 
@@ -557,80 +561,80 @@ h2 {
 
 @media (min-width: 576px) {
   .watermark {
-    margin: 50px 15px 60px;
+    margin: 50px 0 60px;
   }
   
-  .referees-list, .referees-list div, .referees-list img {
+  .referees-list, .referees-list a, .referees-list img {
     max-height: 70px;
   }
 
   .top-list {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
   
   .bottom-list {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   
-  .top-list div {
+  .top-list a {
     animation: slideshowLR-70 var(--top-list-duration) linear infinite;
   }
 
-  .bottom-list div {
+  .bottom-list a {
     animation: slideshowRL-70 var(--bottom-list-duration) linear infinite;
   }
 }
 
 @media (min-width: 768px) {
   .watermark {
-    margin: 70px 15px 80px;
+    margin: 70px 0 80px;
   }
 
-  .referees-list, .referees-list div, .referees-list img {
+  .referees-list, .referees-list a, .referees-list img {
     max-height: 90px;
   }
 
   .top-list {
-    padding-top: 50px;
+    margin-top: 50px;
   }
   
   .bottom-list {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
-  .top-list div {
+  .top-list a {
     animation: slideshowLR-90 var(--top-list-duration) linear infinite;
   }
 
-  .bottom-list div {
+  .bottom-list a {
     animation: slideshowRL-90 var(--bottom-list-duration) linear infinite;
   }
 }
 
 @media (min-width: 992px) {
   .watermark {
-    margin: 90px 15px 110px;
+    margin: 90px 0 110px;
   }
 
-  .referees-list, .referees-list div, .referees-list img {
+  .referees-list, .referees-list a, .referees-list img {
     max-height: 110px;
   }
 
   .top-list {
-    padding-top: 70px;
+    margin-top: 70px;
   }
   
   .bottom-list {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
-  .top-list div {
+  .top-list a {
     animation: slideshowLR-110 var(--top-list-duration) linear infinite;
   }
 
-  .bottom-list div {
+  .bottom-list a {
     animation: slideshowRL-110 var(--bottom-list-duration) linear infinite;
   }
 }
