@@ -530,7 +530,6 @@ h2 {
 .referees-list {
   width: max-content;
   display: flex;
-  /* padding: 20px 0; */
   padding: 10px 0;
 }
 
