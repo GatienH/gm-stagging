@@ -214,10 +214,50 @@ h2 {
   font-size: 1.75em;
 }
 
+.btn {
+  text-align: center;
+  /* margin: 40px auto 0 auto; */
+  margin: 0 auto;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn, .btn svg {
+  height: 40px;
+  width: 178px;
+}
+
+.btn svg text{
+  text-anchor: middle;
+}
+
+.btn a:hover .btn-bg {
+  fill:#22FFCA;
+}
+
+.btn a:hover .btn-gap {
+  stroke:#22FFCA;
+}
+
+/* .btn a:hover .on {
+  stroke:#22FFCA;
+}
+
+.btn a:hover .off {
+  stroke:#fff;
+} */
+
 .separator {
   width: 100%;
   background-color: #fff;
   text-align: center;
+}
+
+.separator span {
+  display: block;
+  margin: 0 15px;
+  max-width: 1200px;
+  border-bottom: solid 3px #22FFCA;
 }
 
 @media (min-width: 768px) {
@@ -233,11 +273,24 @@ h2 {
   h2 {
     font-size: 3em;
   }
+
+  .btn, .btn svg {
+    height: 52px;
+    width: 232px;
+  }
+
+  .separator span {
+    margin: 0 30px;
+  }
 }
 
 @media (min-width: 1260px) {
   h2, .page-title p {
     margin: 0 auto;
+  }
+
+  .separator span {
+    margin: auto;
   }
 }
 
@@ -365,7 +418,11 @@ h2 {
   height: 60px;
 }
 
-.btn {
+.offer .btn {
+  margin: 40px auto 0 auto;
+}
+
+/* .btn {
   text-align: center;
   margin: 40px auto 0 auto;
   font-weight: 700;
@@ -387,14 +444,6 @@ h2 {
 
 .btn a:hover .btn-gap {
   stroke:#22FFCA;
-}
-
-/* .btn a:hover .on {
-  stroke:#22FFCA;
-}
-
-.btn a:hover .off {
-  stroke:#fff;
 } */
 
 @media (min-width: 576px) {
@@ -482,14 +531,18 @@ h2 {
     margin-left: 36px;
   }
 
-  .btn {
+  .offer .btn {
     margin-top: 80px;
   }
 
-  .btn, .btn svg {
+  /* .btn {
+    margin-top: 80px;
+  } */
+
+  /* .btn, .btn svg {
     height: 52px;
     width: 232px;
-  }
+  } */
 }
 
 @media (min-width: 1260px) {
