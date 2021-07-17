@@ -22,69 +22,89 @@
 #methodo {
   background-color: #fff;
   width: 100%;
-  text-align: center;
 }
 
-#methodo div {
-  margin: 0 15px 150px;
-  max-width: 1200px;
-}
-
-#methodo p, #methodo ul {
+.methodo-title {
+  padding: 0 15px;
   margin: 0 auto;
-  max-width: 1000px;
-  font-size: 1em;
-  line-height: 132,4%;
-}
-
-#methodo p {
-  margin-top: 45px;
-  font-weight: 700;
-}
-
-#methodo .methodo-title {
-  margin-top: 10px;
-  max-width: min-content;
+  width: min-content;
   font-weight: 800;
   text-transform: uppercase;
+  text-align: center;
   font-size: 3em;
   line-height: 105%;
   color: #E9E9F1;
+}
+
+.methodo-title span {
+  display: block;
+  width: 100%;
   border-bottom: solid 3px #22FFCA;
 }
 
-#methodo .methodo-title:first-child {
+.methodo-title span:first-child {
   padding-top: 20px;
   border-top: solid 3px #22FFCA;
 }
 
-#methodo ul {
-  font-weight: 500;
-  padding: 0;
+.methodo-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 921px;
+  margin: 50px 15px;
 }
 
-#methodo li {
-  margin: 1em 15px;
+.methodo-content p, .methodo-content ul {
+  margin: 0 auto;
+}
 
+.methodo-content p {
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 145.893%;
+}
+
+.methodo-content ul {
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+  font-size: 0.875em;
+}
+
+.methodo-content li {
+  margin-bottom: 0.875em;
 }
 
 @media (min-width: 400px) {
-  #methodo .methodo-title {
+  .methodo-title {
     font-size: 4em;
   }
 }
 
 @media (min-width: 576px) {
-  #methodo p, #methodo ul {
-    font-size: 1.2em;
-  }
-
-  #methodo .methodo-title {
+  .methodo-title {
     font-size: 5em;
   }
 
-  #methodo li {
-    margin: 1.2em 20px;
+  .methodo-content {
+    flex-wrap: nowrap;
+  }
+
+  .methodo-content p {
+    min-width: min-content;
+    max-width: 33.333%;
+    padding-right: 22px;
+    font-size: 1.281em;
+  }
+
+  .methodo-content ul {
+    font-size: 1em;
+    padding-left: 22px;
+  }
+
+  .methodo-content li {
+    margin-bottom: 1em;
   }
 }
 
@@ -106,24 +126,24 @@
     margin: 0 30px;
   } */
 
-  #methodo div {
-    margin: 0 30px 200px;
-  }
-
-  #methodo p, #methodo ul {
-    font-size: 1.4em;
-  }
-
-  #methodo .methodo-title {
+  .methodo-title {
     font-size: 7em;
   }
 
-  #methodo p {
-    margin-top: 65px;
+  .methodo-content {
+    margin: 80px 30px;
   }
 
-  #methodo li {
-    margin: 1.4em 20px;
+  .methodo-content p {
+    font-size: 1.75em;
+  }
+
+  .methodo-content ul {
+    font-size: 1.25em;
+  }
+
+  .methodo-content li {
+    margin-bottom: 1.25em;
   }
 }
 
@@ -131,24 +151,12 @@
   #offer-hiring .offer-details {
     margin: 0 auto;
   }
-}
 
-@media (min-width: 992px) {
-  #methodo p, #methodo ul {
-    font-size: 1.875em;
+  .methodo-content {
+    margin: 80px auto;
   }
 
-  #methodo .methodo-title {
+  .methodo-title {
     font-size: 8.625em;
-  }
-
-  #methodo li {
-    margin: 1.4em 30px;
-  }
-}
-
-@media (min-width: 1260px) {
-  #methodo div {
-    margin: 0 auto 200px;
   }
 }
