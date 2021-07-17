@@ -22,7 +22,7 @@ class HeaderBar extends HTMLElement {
         ['about',
           ['a-propos.html', 'À propos'], ['who-am-i.html', 'Who am I?']
         ],
-        ['hiring',
+        ['recruitment',
           ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
         ],
         // ['page4',

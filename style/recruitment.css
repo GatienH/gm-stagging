@@ -1,20 +1,20 @@
-#stamp-hiring {
+#stamp-recruitment {
   position: absolute;
   top: 225px;
   text-align: center;
 }
 
-#stamp-hiring img {
+#stamp-recruitment img {
   width: 78px;
   margin-bottom: 20px;
 }
 
-#offer-hiring {
+#offer-recruitment {
   margin-top: 264px;
   padding-top: 55px;
 }
 
-#offer-hiring .offer-details {
+#offer-recruitment .offer-details {
   margin-top: 0;
   max-width: 921px;
 }
@@ -216,15 +216,15 @@
 }
 
 @media (min-width: 768px) {
-  #stamp-hiring {
+  #stamp-recruitment {
     top: 450px;
   }
 
-  #stamp-hiring img {
+  #stamp-recruitment img {
     width: 157px;
   }
 
-  #offer-hiring {
+  #offer-recruitment {
     margin-top: 528px;
     padding-top: 90px;
   }
@@ -278,7 +278,7 @@
 }
 
 @media (min-width: 981px) {
-  #offer-hiring .offer-details {
+  #offer-recruitment .offer-details {
     margin: 0 auto;
   }
 
