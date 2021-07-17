@@ -76,6 +76,68 @@
   margin-bottom: 0.875em;
 }
 
+#consulting {
+  background-color: #fff;
+  width:100%;
+  padding: 20px 0 0;
+}
+
+.consulting-content {
+  /* background-color: coral; */
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 921px;
+  margin: 20px 15px 0;
+}
+
+.consulting-content p {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.mapping, .care {
+  position: relative;
+  /* width: 100%; */
+}
+
+.mapping {
+  /* background-color: brown; */
+  /* width: 75%; */
+  margin-bottom: 20px;
+}
+
+.mapping p {
+  position: relative;
+  margin: 80px 50px 0 0;
+}
+
+.mapping svg {
+  position: absolute;
+  right: 0;
+}
+
+.care {  
+  width: 100%;
+  /* justify-content: center; */
+  text-align: right;
+}
+
+.care p {
+  position: relative;
+  margin: 80px 0 0;
+}
+
+.care svg {
+  position: absolute;
+  right: 95px;
+}
+
+.btn {
+  width: 100%;
+  padding: 40px 0 55px;
+}
+
 @media (min-width: 400px) {
   .methodo-title {
     font-size: 4em;
@@ -106,6 +168,51 @@
   .methodo-content li {
     margin-bottom: 1em;
   }
+
+  h2 {
+    position: relative;
+  }
+
+  .consulting-content {
+    position: relative;
+    top: -60px;
+    margin: 0 15px -60px;
+  }
+
+  .consulting-content p {
+    font-size: 1.5em;
+  }
+
+  .mapping, .care {
+    width: calc(50% - 1px);
+  }
+
+  .mapping {
+    align-self: flex-end;
+    margin-top: 140px;
+  }
+
+  .mapping p {
+    margin: 80px 0 0;
+  }
+
+  .mapping svg {
+    right: 50px;
+  }
+
+  .border {
+    background-color: #E9E9F1;
+    margin-top: 40px;
+    width: 2px;
+    height: 240px;
+  }
+
+  .btn {
+    position: relative;
+    bottom: 42px;
+    margin-bottom: -42px;
+    padding: 0 0 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -121,10 +228,6 @@
     margin-top: 528px;
     padding-top: 90px;
   }
-
-  /* #about-separator span {
-    margin: 0 30px;
-  } */
 
   .methodo-title {
     font-size: 7em;
@@ -145,6 +248,33 @@
   .methodo-content li {
     margin-bottom: 1.25em;
   }
+
+  .consulting-content {
+    top: -110px;
+    margin: 0 30px -110px;
+  }
+
+  .consulting-content p {
+    font-size: 2.25em;
+  }
+
+  .mapping svg{
+    width: 171px;
+    height: 186px;
+  }
+  
+  .care svg {
+    width: 240px;
+    height: 150px;
+  }
+
+  .border {
+    height: 277px;
+  }
+
+  .btn {
+    padding: 0 0 110px;
+  }
 }
 
 @media (min-width: 981px) {
@@ -158,5 +288,9 @@
 
   .methodo-title {
     font-size: 8.625em;
+  }
+
+  .consulting-content {
+    margin: 0 auto -110px;
   }
 }

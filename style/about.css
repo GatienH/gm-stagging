@@ -42,11 +42,6 @@
   margin: 0 15px 1em 15px;
 }
 
-#about-separator span {
-  margin: 0 15px;
-  max-width: 1200px;
-}
-
 #offer-about {
   /* margin-top: 0px; */
   padding-top: 20px;
@@ -87,10 +82,6 @@
     margin-top: -205px;
     margin-left: 66px;
   }
-
-  #about-separator span {
-    margin: 0 30px;
-  }
 }
 
 @media (min-width: 1260px) {
@@ -100,10 +91,6 @@
   
   #stamp-about img {
     margin-left: 160px;
-  }
-
-  #about-separator span {
-    margin: auto;
   }
 }
 
