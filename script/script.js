@@ -28,9 +28,9 @@ class HeaderBar extends HTMLElement {
         // ['page4',
         //   ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN']
         // ],
-        // ['page5',
-        //   ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN']
-        // ],
+        ['clients',
+          ['nos-clients.html', 'Nos clients'], ['page5_en.html', 'Page 5 EN']
+        ],
         // ['contact-us',
         //   ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us']
         // ]
