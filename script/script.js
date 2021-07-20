@@ -25,15 +25,15 @@ class HeaderBar extends HTMLElement {
         ['recruitment',
           ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
         ],
-        // ['page4',
-        //   ['page4_fr.html', 'Page 4 FR'], ['page4_en.html', 'Page 4 EN']
-        // ],
-        // ['page5',
-        //   ['page5_fr.html', 'Page 5 FR'], ['page5_en.html', 'Page 5 EN']
-        // ],
-        // ['contact-us',
-        //   ['contact.html', 'Contactez-nous'], ['contact.html', 'Contact us']
-        // ]
+        ['consulting',
+          ['conseil-et-mission-integree.html', 'Conseil / Mission intégrée'], ['page4_en.html', 'Page 4 EN']
+        ],
+        ['clients',
+          ['nos-clients.html', 'Nos clients'], ['page5_en.html', 'Page 5 EN']
+        ],
+        ['terms',
+          ['', ''], ['contact.html', 'Contact us']
+        ]
       ];
 
     // *********************************************
