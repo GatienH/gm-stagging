@@ -235,6 +235,10 @@ h2 {
   text-anchor: middle;
 }
 
+.btn a {
+  text-decoration: none;
+}
+
 .btn a:hover .btn-bg {
   fill:#22FFCA;
 }
