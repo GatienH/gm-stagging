@@ -158,7 +158,14 @@ class HeaderBar extends HTMLElement {
     const nav = document.createElement('nav');
 
     // set ids and class
-    nav.setAttribute('class', 'menu-toggle hidden');
+    // nav.setAttribute('class', 'menu-toggle hidden');
+    nav.setAttribute('class', 'hidden');
+
+
+    const navWrapper = document.createElement('div');
+    navWrapper.setAttribute('id', 'nav-wrapper');
+    navWrapper.setAttribute('class', 'menu-toggle');
+    nav.appendChild(navWrapper);
 
     return nav;
   }
@@ -229,12 +236,13 @@ class HeaderBar extends HTMLElement {
     const html = document.querySelector("html");
     const body = document.querySelector("body");
     const nav = document.querySelector("nav");
+
     const burgerIcon = document.querySelector("#burger-icon");
     const closeIcon = document.querySelector("#close-icon");
 
     // check for optims
-    html.classList.toggle("overflow-y-hiden");
-    body.classList.toggle("overflow-y-hiden");
+    html.classList.toggle("overflow-y-hidden");
+    body.classList.toggle("overflow-y-hidden");
     nav.classList.toggle("hidden");
     burgerIcon.classList.toggle("hidden");
     closeIcon.classList.toggle("hidden");
