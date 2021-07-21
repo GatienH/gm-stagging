@@ -7,20 +7,9 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  background: url(../img/m_char.svg) top right no-repeat;
-  background-size: auto 264px;
-  background-attachment: fixed;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   color: #252377;
-}
-
-@media (min-width: 768px) {
-  body {
-    background-size: auto;
-  }
 }
 
 .overflow-y-hiden {
@@ -187,6 +176,13 @@ main {
   flex-direction: column;
 }
 
+#m-bg {
+  position:fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
 /* h1 {
   position: absolute;
   z-index: 500;
@@ -265,6 +261,11 @@ h2 {
 }
 
 @media (min-width: 768px) {
+  #m-bg svg {
+    width: 715px;
+    height: 528px;
+  }
+
   .page-title {
     top: 200px;
     font-size: 6.125em;
@@ -754,7 +755,7 @@ footer {
   font-weight: 600;
   font-size: 0.775em;
   line-height: 185%;
-  padding: 0 15px;
+  padding: 30px 15px;
 }
 
 footer, footer a {
@@ -776,7 +777,6 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  margin: 30px auto;
 }
 
 .footer-left, .footer-middle, .footer-right {
@@ -819,13 +819,12 @@ footer a:hover {
 
 @media (min-width: 768px) {
   footer {
-    padding: 0 30px;
+    padding: 45px 30px 60px;
     font-size: 0.875em;
   }
 
   .footer-content {
     flex-wrap: nowrap;
-    margin: 45px auto 60px auto;
   }
 
   .footer-left, .footer-middle, .footer-right {
