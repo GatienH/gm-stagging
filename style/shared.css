@@ -18,6 +18,10 @@ body {
   /* height: 100vh; */
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /* ################################ */
 /* ## HEADER                     ## */
 /* ################################ */
@@ -32,14 +36,8 @@ header {
   width: 100vw;
 }
 
-.bg-grey-img, .bg-white, .bg-grey {
+.bg-white, .bg-grey {
   z-index: 1000;
-}
-
-.bg-img {
-  background: url(../img/m_char_header_sm.svg) top right no-repeat;
-  background-attachment: fixed;
-  /* background-size: auto 87px; */
 }
 
 .bg-white {
@@ -50,11 +48,22 @@ header {
   background-color: #F1F1F1;
 }
 
+#header-m {
+  position:fixed;
+  top: 0;
+  right: 0;
+  height: 87px;
+}
+
 #header {
   flex-grow: 1;
   max-width: 1200px;
   justify-content: space-between;
   margin: 25px 15px 15px 15px;
+}
+
+#brand {
+  position: relative;
 }
 
 .right-items {
@@ -86,10 +95,6 @@ nav {
   font-size: 2em;
   text-transform: uppercase;
   background-color:rgb(255, 255, 255, 0.9);
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 nav ul {
@@ -135,12 +140,13 @@ nav li a:hover span {
 }
 
 @media (min-width: 768px) {
-  .bg-img {
-    background: url(../img/m_char_header_lg.svg) top right no-repeat;
+  #header-m {
+    height: 168px;
   }
 
-  .bg-grey {
-    background-color: #F1F1F1;
+  #header-m svg {
+    width: 714px;
+    height: 168px;
   }
 
   #header {
