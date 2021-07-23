@@ -1,12 +1,8 @@
 .w-container {
   margin-top: 264px;
-  padding-top: 60px;
+  padding-top: 30px;
   background-color: #fff;
   width: 100%;
-}
-
-.w-container {
-  padding-top: 60px;
 }
 
 #consulting {
@@ -104,6 +100,7 @@
 @media (min-width: 768px) {
   .w-container {
     margin-top: 528px;
+    padding-top: 60px;
   }
 
   #consulting {
