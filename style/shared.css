@@ -19,7 +19,7 @@ body {
 }
 
 .hidden {
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 /* ################################ */
@@ -90,10 +90,8 @@ nav {
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2em;
-  text-transform: uppercase;
+  justify-content: center;
 }
 
 #nav-wrapper {
@@ -109,51 +107,31 @@ nav ul {
   position: relative;
   margin: 0 15px;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 nav li {
-  /* position: absolute; */
-  /* background-color: brown; */
-  margin: 15px 0;
+  margin: 10px 0;
   text-align: center;
-  /* display: flex; */
+  background: none;
 }
 
-nav li a {
-  /* position: relative; */
-  display: inline-block;
-
-  text-align: center;
-  /* position: relative; */
-  margin: 0 auto;
+nav a {
   color: #252377;
   text-decoration: none;
+  line-height: 150%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s linear;
 }
 
-nav li span {
-  display: block;
-  /* position: absolute;
-  bottom: 0;
-  left: 0; */
-  background-color:#22FFCA;
-  height: 5px;
-  width: 100%;
-  max-width: 318px;
-  transition: width 0.3s ease;
-  margin: 0 auto;
-}
-
-nav li a:hover span {
-  width: 100%;
+nav a:hover, .active {
+  border-bottom: 2px solid #22FFCA;
 }
 
 .active {
   font-weight: 800;
-}
-
-.active span {
-  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -170,12 +148,9 @@ nav li a:hover span {
     margin: 50px 30px 30px 30px;
   }
 
-  nav {
-    font-size: 2.5em;
-  }
-
   nav ul {
     margin: 0 30px;
+    font-size: 2.5em;
   }
   
   #brand svg {

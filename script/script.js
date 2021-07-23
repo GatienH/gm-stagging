@@ -179,8 +179,6 @@ class HeaderBar extends HTMLElement {
       const navElmt = document.createElement('li');
       const navLink = document.createElement('a');
       
-      const navSpan = document.createElement('span');
-
       // navLink.setAttribute('href', `${path}${e[lgs.indexOf(lg) + 1][0]}`);
       navLink.setAttribute('href', e[lgs.indexOf(lg) + 1][0]);
       
@@ -189,7 +187,7 @@ class HeaderBar extends HTMLElement {
       }
 
       navLink.textContent = e[lgs.indexOf(lg) + 1][1];
-      navList.appendChild(navElmt).appendChild(navLink).appendChild(navSpan);
+      navList.appendChild(navElmt).appendChild(navLink);
     });
 
     return navList;
