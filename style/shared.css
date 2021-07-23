@@ -7,26 +7,19 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  background: url(../img/m_char.svg) top right no-repeat;
-  background-size: auto 264px;
-  background-attachment: fixed;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   color: #252377;
 }
 
-@media (min-width: 768px) {
-  body {
-    background-size: auto;
-  }
-}
-
-.overflow-y-hiden {
+.overflow-y-hidden {
   overflow-y: hidden;
   position: relative;
   /* height: 100vh; */
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 /* ################################ */
@@ -43,14 +36,8 @@ header {
   width: 100vw;
 }
 
-.bg-grey-img, .bg-white, .bg-grey {
+.bg-white, .bg-grey {
   z-index: 1000;
-}
-
-.bg-img {
-  background: url(../img/m_char_header_sm.svg) top right no-repeat;
-  background-attachment: fixed;
-  /* background-size: auto 87px; */
 }
 
 .bg-white {
@@ -61,11 +48,22 @@ header {
   background-color: #F1F1F1;
 }
 
+#header-m {
+  position:fixed;
+  top: 0;
+  right: 0;
+  height: 87px;
+}
+
 #header {
   flex-grow: 1;
   max-width: 1200px;
   justify-content: space-between;
   margin: 25px 15px 15px 15px;
+}
+
+#brand {
+  position: relative;
 }
 
 .right-items {
@@ -92,78 +90,67 @@ nav {
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2em;
-  text-transform: uppercase;
-  background-color:rgb(255, 255, 255, 0.9);
+  justify-content: center;
 }
 
-.hidden {
-  visibility: hidden;
+#nav-wrapper {
+  background-color:rgb(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 nav ul {
+  position: relative;
   margin: 0 15px;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 nav li {
-  margin: 15px 0;
+  margin: 10px 0;
   text-align: center;
+  background: none;
 }
 
-nav li a {
-  position: relative;
-  margin: 0 auto;
-  width: max-content;
+nav a {
   color: #252377;
   text-decoration: none;
+  line-height: 150%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s linear;
 }
 
-nav li span {
-  /* display: block; */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color:#22FFCA;
-  height: 2px;
-  width: 0%;
-  transition: width 0.3s ease;
-}
-
-nav li a:hover span {
-  width: 100%;
+nav a:hover, .active {
+  border-bottom: 2px solid #22FFCA;
 }
 
 .active {
   font-weight: 800;
 }
 
-.active span {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
-  .bg-img {
-    background: url(../img/m_char_header_lg.svg) top right no-repeat;
+  #header-m {
+    height: 168px;
   }
 
-  .bg-grey {
-    background-color: #F1F1F1;
+  #header-m svg {
+    width: 714px;
+    height: 168px;
   }
 
   #header {
     margin: 50px 30px 30px 30px;
   }
 
-  nav {
-    font-size: 2.5em;
-  }
-
   nav ul {
     margin: 0 30px;
+    font-size: 2.5em;
   }
   
   #brand svg {
@@ -185,6 +172,13 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+#m-bg {
+  position:fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 /* h1 {
@@ -235,6 +229,10 @@ h2 {
   text-anchor: middle;
 }
 
+.btn a {
+  text-decoration: none;
+}
+
 .btn a:hover .btn-bg {
   fill:#22FFCA;
 }
@@ -265,6 +263,11 @@ h2 {
 }
 
 @media (min-width: 768px) {
+  #m-bg svg {
+    width: 715px;
+    height: 528px;
+  }
+
   .page-title {
     top: 200px;
     font-size: 6.125em;
@@ -591,7 +594,7 @@ h2 {
 }
 
 .referees-list:hover a {
-  animation-play-state: paused
+  /* animation-play-state: paused */
 }
 
 .referees-list a {
@@ -754,7 +757,7 @@ footer {
   font-weight: 600;
   font-size: 0.775em;
   line-height: 185%;
-  padding: 0 15px;
+  padding: 30px 15px;
 }
 
 footer, footer a {
@@ -776,7 +779,6 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  margin: 30px auto;
 }
 
 .footer-left, .footer-middle, .footer-right {
@@ -819,13 +821,12 @@ footer a:hover {
 
 @media (min-width: 768px) {
   footer {
-    padding: 0 30px;
+    padding: 45px 30px 60px;
     font-size: 0.875em;
   }
 
   .footer-content {
     flex-wrap: nowrap;
-    margin: 45px auto 60px auto;
   }
 
   .footer-left, .footer-middle, .footer-right {

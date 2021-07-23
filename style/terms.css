@@ -56,15 +56,15 @@
 
   #terms {
     margin: 0 30px 44px;
-    font-size: 1.375em;
+    /* font-size: 1.375em; */
   }
 
   .t1 {
-    font-size: 2em;
+    /* font-size: 2em; */
   }
 
   .t2 {
-    font-size: 1.625em;
+    /* font-size: 1.625em; */
   }
 }
 

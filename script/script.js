@@ -26,7 +26,7 @@ class HeaderBar extends HTMLElement {
           ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
         ],
         ['consulting',
-          ['conseil-et-mission-integree.html', 'Conseil / Mission intégrée'], ['page4_en.html', 'Page 4 EN']
+          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['page4_en.html', 'Page 4 EN']
         ],
         ['clients',
           ['nos-clients.html', 'Nos clients'], ['page5_en.html', 'Page 5 EN']
@@ -85,6 +85,7 @@ class HeaderBar extends HTMLElement {
   setStructure() {
     // create html elements
     const header = document.createElement('header');
+    const headerM = document.createElement('div');
     const headerDiv = document.createElement('div');
     const leftItems = document.createElement('div')
     const brand = document.createElement('div');
@@ -96,7 +97,9 @@ class HeaderBar extends HTMLElement {
     const burger = document.createElement('div');
 
     // set ids and class
-    header.setAttribute('class', 'bg-grey bg-img');
+    // header.setAttribute('class', 'bg-grey bg-img');
+    header.setAttribute('class', 'bg-grey');
+    headerM.setAttribute('id', 'header-m');
     headerDiv.setAttribute('id', 'header');
     leftItems.setAttribute('class', 'left-items');
     brand.setAttribute('id', 'brand');
@@ -110,6 +113,11 @@ class HeaderBar extends HTMLElement {
 
     // add content and images
     
+    headerM.innerHTML = `
+    <svg width="357" height="87" viewBox="0 0 714 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M697.337 528L656.184 271L539.99 528H283.785L169.684 271L122.884 528H0L103.436 0H178.224L412.685 524.5L652.608 0H714.184V528H697.337Z" fill="#FBFBFB"/>
+    </svg>`;
+
     // TO DO : add image path for EN
     brand.innerHTML = 
     `<a href="index.html" title="homepage">
@@ -132,6 +140,7 @@ class HeaderBar extends HTMLElement {
     </svg>`;
 
     // build structure
+    header.appendChild(headerM);
     header.appendChild(headerDiv);
     headerDiv.appendChild(leftItems);
     leftItems.appendChild(brand);
@@ -149,7 +158,14 @@ class HeaderBar extends HTMLElement {
     const nav = document.createElement('nav');
 
     // set ids and class
-    nav.setAttribute('class', 'menu-toggle hidden');
+    // nav.setAttribute('class', 'menu-toggle hidden');
+    nav.setAttribute('class', 'hidden');
+
+
+    const navWrapper = document.createElement('div');
+    navWrapper.setAttribute('id', 'nav-wrapper');
+    navWrapper.setAttribute('class', 'menu-toggle');
+    nav.appendChild(navWrapper);
 
     return nav;
   }
@@ -163,8 +179,6 @@ class HeaderBar extends HTMLElement {
       const navElmt = document.createElement('li');
       const navLink = document.createElement('a');
       
-      const navSpan = document.createElement('span');
-
       // navLink.setAttribute('href', `${path}${e[lgs.indexOf(lg) + 1][0]}`);
       navLink.setAttribute('href', e[lgs.indexOf(lg) + 1][0]);
       
@@ -173,7 +187,7 @@ class HeaderBar extends HTMLElement {
       }
 
       navLink.textContent = e[lgs.indexOf(lg) + 1][1];
-      navList.appendChild(navElmt).appendChild(navLink).appendChild(navSpan);
+      navList.appendChild(navElmt).appendChild(navLink);
     });
 
     return navList;
@@ -220,12 +234,13 @@ class HeaderBar extends HTMLElement {
     const html = document.querySelector("html");
     const body = document.querySelector("body");
     const nav = document.querySelector("nav");
+
     const burgerIcon = document.querySelector("#burger-icon");
     const closeIcon = document.querySelector("#close-icon");
 
     // check for optims
-    html.classList.toggle("overflow-y-hiden");
-    body.classList.toggle("overflow-y-hiden");
+    html.classList.toggle("overflow-y-hidden");
+    body.classList.toggle("overflow-y-hidden");
     nav.classList.toggle("hidden");
     burgerIcon.classList.toggle("hidden");
     closeIcon.classList.toggle("hidden");
@@ -235,6 +250,7 @@ class HeaderBar extends HTMLElement {
 customElements.define('header-bar', HeaderBar);
 
 const header = document.querySelector('header');
+const headerM = document.querySelector('#header-m');
 
 function onWindowScroll(event) {
   var headerHeight = document.querySelector('header').offsetHeight;
@@ -244,7 +260,7 @@ function onWindowScroll(event) {
   // TO DO : manage class with toggles
   if (window.pageYOffset > whiteBgStart - headerHeight) {
     header.classList.add('bg-white');
-    header.classList.remove('bg-img');
+    headerM.classList.add('hidden');
     header.classList.remove('bg-grey');
 
     if (window.pageYOffset > whiteBgEnd - headerHeight) {
@@ -254,7 +270,7 @@ function onWindowScroll(event) {
   }
   else {
     header.classList.add('bg-grey');
-    header.classList.add('bg-img');
+    headerM.classList.remove('hidden');
     header.classList.remove('bg-white');
   }
 }
