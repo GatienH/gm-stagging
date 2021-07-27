@@ -66,7 +66,9 @@ class HeaderBar extends HTMLElement {
 
     menuToggles.forEach( e => {
       e.addEventListener('click', e => {
-        this.menuToggle();
+        if (e.target.tagName !== 'A') {
+          this.menuToggle();
+        }
       });
     });
   }
@@ -174,6 +176,7 @@ class HeaderBar extends HTMLElement {
     // let path = this.setPath(lg, lgs);
 
     const navList = document.createElement('ul');
+    navList.setAttribute('class', 'menu-toggle');
 
     pages.forEach( e => {
       const navElmt = document.createElement('li');
