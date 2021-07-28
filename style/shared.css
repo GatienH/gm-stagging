@@ -52,7 +52,10 @@ header {
   position:fixed;
   top: 0;
   right: 0;
-  height: 87px;
+}
+
+#header-m svg {
+  display: block;
 }
 
 #header {
@@ -64,6 +67,10 @@ header {
 
 #brand {
   position: relative;
+}
+
+#brand svg {
+  display: block;
 }
 
 .right-items {
@@ -135,13 +142,9 @@ nav a:hover, .active {
 }
 
 @media (min-width: 768px) {
-  #header-m {
-    height: 168px;
-  }
-
   #header-m svg {
-    width: 714px;
-    height: 168px;
+    width: 643px;
+    height: 163px;
   }
 
   #header {

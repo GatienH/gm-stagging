@@ -114,11 +114,12 @@ class HeaderBar extends HTMLElement {
     burger.setAttribute('class', 'menu-toggle');
 
     // add content and images
-    
     headerM.innerHTML = `
-    <svg width="357" height="87" viewBox="0 0 714 168" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M697.337 528L656.184 271L539.99 528H283.785L169.684 271L122.884 528H0L103.436 0H178.224L412.685 524.5L652.608 0H714.184V528H697.337Z" fill="#FBFBFB"/>
+    <svg width="324" height="82" viewBox="0 0 643 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M581.104 0H642.68V163H506.543L581.104 0Z" fill="#FBFBFB"/>
+      <path d="M31.9319 0H106.72L179.584 163H0L31.9319 0Z" fill="#FBFBFB"/>
     </svg>`;
+
 
     // TO DO : add image path for EN
     brand.innerHTML = 
