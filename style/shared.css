@@ -77,9 +77,46 @@ header {
   align-items: center;
 }
 
-/* .lg-toggle {
-  margin-left: 40px;
+
+
+#lg-toggle {
+  margin-right: 15px;
+  z-index: 0;
+
+  font-weight: 700;
+  color: #22FFCA;
+  font-size: 1em;
+}
+
+#lg-toggle span, #lg-toggle a {
+  margin: 0 5px;
+}
+
+#lg-toggle a {
+  color: #252377;
+  text-decoration: none;
+}
+
+#lg-toggle a:hover {
+  text-decoration: underline;
+}
+
+
+/* #lg-toggle :nth-child(n+2):nth-last-child(n)::before {
+  content: '|';
 } */
+
+@media (min-width: 768px) {
+  #lg-toggle {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.313em;
+    margin-right: 35px;
+  }
+}
+
+
+
 
 #burger {
   display: flex;

@@ -56,8 +56,8 @@ class HeaderBar extends HTMLElement {
     // add menu to nav to header & lgToggle to header to body
     nav.appendChild(menu);
 
-    // uncomment for lg toggle
     // header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
+    header.querySelector("#header .right-items").prepend(lgToggleLinks);
 
     header.querySelector("#header").appendChild(nav);
     document.body.prepend(header);
@@ -93,7 +93,7 @@ class HeaderBar extends HTMLElement {
     const brand = document.createElement('div');
     const rightItems = document.createElement('div');
 
-    // uncomment for lg toggle
+    
     // const lgToggle = document.createElement('div');
 
     const burger = document.createElement('div');
@@ -107,7 +107,7 @@ class HeaderBar extends HTMLElement {
     brand.setAttribute('id', 'brand');
     rightItems.setAttribute('class', 'right-items');
 
-    // uncomment for lg toggle
+    
     // lgToggle.setAttribute('class', 'lg-toggle');
 
     burger.setAttribute('id', 'burger');
@@ -148,11 +148,9 @@ class HeaderBar extends HTMLElement {
     headerDiv.appendChild(leftItems);
     leftItems.appendChild(brand);
     headerDiv.appendChild(rightItems);
-    rightItems.appendChild(burger);
-
-    // uncomment for lg toggle
     // rightItems.appendChild(lgToggle);
-
+    rightItems.appendChild(burger);
+    
     return header;
   }
 
@@ -198,7 +196,11 @@ class HeaderBar extends HTMLElement {
   }
 
   setLgToggle(lg, page, lgs, pages) {
+
+    // header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
+
     const lgToggleElmt = document.createElement('div');
+    lgToggleElmt.setAttribute('id', 'lg-toggle');
     let lgToggleLink;
 
     lgs.forEach( e => {
@@ -214,13 +216,14 @@ class HeaderBar extends HTMLElement {
       lgToggleLink.textContent = e.toUpperCase();
       lgToggleElmt.appendChild(lgToggleLink);
 
-      if (lgs.length > 1 && (lgs.indexOf(e) < lgs.length - 1) ) {
-        let lgToggleSep = document.createElement('span');
-        lgToggleSep.textContent = ' | ';
-        lgToggleElmt.appendChild(lgToggleSep);
-      }
+      // if (lgs.length > 1 && (lgs.indexOf(e) < lgs.length - 1) ) {
+      //   let lgToggleSep = document.createElement('span');
+      //   lgToggleSep.setAttribute('class', 'sep');
+      //   lgToggleSep.textContent = '|';
+      //   lgToggleElmt.appendChild(lgToggleSep);
+      // }
     });
-
+    
     return lgToggleElmt;
   }
 
