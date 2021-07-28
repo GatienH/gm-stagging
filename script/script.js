@@ -17,7 +17,7 @@ class HeaderBar extends HTMLElement {
 
       const pages = [
         ['home',
-          ['index.html', 'Accueil'], ['index.html', 'Home page']
+          ['index.html', 'Accueil'], ['index.html', 'Home']
         ],
         ['about',
           ['a-propos.html', 'À propos'], ['about-us.html', 'About us']
