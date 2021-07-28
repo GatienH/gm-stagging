@@ -798,6 +798,20 @@ footer a:hover {
   margin: 30px 0;
 }
 
+.footer-right a {
+  display: block;
+  max-width: max-content;
+}
+
+.footer-right svg {
+  margin-bottom: -2px;
+}
+
+.footer-right svg {
+  width: auto;
+  height: 1em;
+}
+
 @media (min-width: 576px) {
   .footer-content {
     flex-direction: row;
