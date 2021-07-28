@@ -20,19 +20,19 @@ class HeaderBar extends HTMLElement {
           ['index.html', 'Accueil'], ['index.html', 'Home page']
         ],
         ['about',
-          ['a-propos.html', 'À propos'], ['who-am-i.html', 'Who am I?']
+          ['a-propos.html', 'À propos'], ['about-us.html', 'About us']
         ],
         ['recruitment',
-          ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
+          ['recrutement.html', 'Recrutement'], ['recruitement.html', 'Recruitement']
         ],
         ['consulting',
-          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['page4_en.html', 'Page 4 EN']
+          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['strategic-people-consulting-firm.html', 'Strategic people consulting firm']
         ],
         ['clients',
-          ['nos-clients.html', 'Nos clients'], ['page5_en.html', 'Page 5 EN']
+          ['nos-clients.html', 'Nos clients'], ['our-clients.html', 'Our clients']
         ],
         ['terms',
-          ['', ''], ['contact.html', 'Contact us']
+          ['', ''], ['', '']
         ]
       ];
 
