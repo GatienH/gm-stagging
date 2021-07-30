@@ -26,7 +26,7 @@ class HeaderBar extends HTMLElement {
           ['recrutement.html', 'Recrutement'], ['recruitment.html', 'Recruitment']
         ],
         ['consulting',
-          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['strategic-people-consulting-firm.html', 'Strategic people consulting firm']
+          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['strategic-people-consulting-firm.html', 'Recruitment consulting firm']
         ],
         ['clients',
           ['nos-clients.html', 'Nos clients'], ['our-clients.html', 'Our clients']
