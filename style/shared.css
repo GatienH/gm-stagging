@@ -582,6 +582,7 @@ h2 {
 
 .referees-watermark {
   max-width: 1200px;
+  min-height: 120px;
   margin: auto;
   padding-top: 30px;
   padding-bottom: 40px;
