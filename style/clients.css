@@ -62,8 +62,6 @@
   text-decoration: underline;
 }
 
-
-
 @media (min-width: 576px) {
   #clients div {
     margin: 20px 0;
