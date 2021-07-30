@@ -615,7 +615,8 @@ h2 {
 }
 
 .referees-list a, .referees-list img {
-  max-width: 210px;
+  /* max-width: 210px; */
+  max-width: 170px;
 }
 
 .referees-list:hover a {
@@ -719,44 +720,44 @@ h2 {
 /* default < 576 */
 @keyframes slideshowLR-50 {
   0%    { left: 0; }
-  100%  { left: calc(-100% + 977px); }
+  100%  { left: calc(-100% + 940px); }
 }
 
 @keyframes slideshowRL-50 {
-  0%    { left: calc(-100% + 977px); }
+  0%    { left: calc(-100% + 940px); }
   100%  { left: 0; }
 }
 
 /* > 576 < 768 */
 @keyframes slideshowLR-70 {
   0%    { left: 0; }
-  100%  { left: calc(-100% + 1147px); }
+  100%  { left: calc(-100% + 1100px); }
 }
 
 @keyframes slideshowRL-70 {
-  0%    { left: calc(-100% + 1147px); }
+  0%    { left: calc(-100% + 1100px); }
   100%  { left: 0; }
 }
 
 /* > 768 < 992 */
 @keyframes slideshowLR-90 {
   0%    { left: 0; }
-  100%  { left: calc(-100% + 1297px); }
+  100%  { left: calc(-100% + 1215px); }
 }
 
 @keyframes slideshowRL-90 {
-  0%    { left: calc(-100% + 1297px); }
+  0%    { left: calc(-100% + 1215px); }
   100%  { left: 0; }
 }
 
 /* > 992 */
 @keyframes slideshowLR-110 {
   0%    { left: 0; }
-  100%  { left: calc(-100% + 1407px); }
+  100%  { left: calc(-100% + 1300px); }
 }
 
 @keyframes slideshowRL-110 {
-  0%    { left: calc(-100% + 1407px); }
+  0%    { left: calc(-100% + 1300px); }
   100%  { left: 0; }
 }
 
