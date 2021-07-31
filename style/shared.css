@@ -184,6 +184,18 @@ main {
   z-index: -1;
 }
 
+.w-container, .g-container {
+  width: 100%;
+}
+
+.w-container {
+  background-color: #fff;
+}
+
+.g-container {
+  background-color: #F1F1F1;
+}
+
 /* h1 {
   position: absolute;
   z-index: 500;
@@ -569,11 +581,6 @@ h2 {
   --top-list-duration: 80s;
   --bottom-list-duration: 100s;
  }
-
- .g-container {
-  background-color: #F1F1F1;
-  width: 100%;
-}
 
 .referees {
   position: relative;

@@ -1,8 +1,6 @@
 .w-container {
   margin-top: 264px;
   padding-top: 42px;
-  background-color: #fff;
-  width: 100%;
 }
 
 #clients {
@@ -25,11 +23,6 @@
   align-self: center;
   max-height: 70px;
   max-width: 108px;
-}
-
-.g-container {
-  background-color: #F1F1F1;
-  width: 100%;
 }
 
 .contact-us {
