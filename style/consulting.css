@@ -1,4 +1,4 @@
-.w-container {
+#consulting-care {
   margin-top: 264px;
   padding-top: 30px;
 }
@@ -96,7 +96,7 @@
 }
 
 @media (min-width: 768px) {
-  .w-container {
+  #consulting-care {
     margin-top: 528px;
     padding-top: 60px;
   }
