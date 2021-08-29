@@ -769,6 +769,98 @@ h2 {
   100%  { left: 0; }
 }
 
+/* ## Jobs                       ## */
+/* ################################ */
+
+#jobs {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.jobs-wrapper {
+  max-width: 921px;
+  margin: 0 15px;
+}
+
+.job-cat {
+  font-size: 1.25em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.jobs-list {
+  display: flex;
+}
+
+.jobs-list p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.short-list {
+  height: 2.5em;
+  overflow: hidden;
+}
+
+.more-jobs {
+  align-self: flex-end;
+  display: flex;
+  cursor: pointer;
+}
+
+.more-jobs, .more-jobs svg {
+  height: 1em;
+  width: auto;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 576px) {
+  .job-cat {
+    font-size: 1.5em;
+  }
+
+  .jobs-list p {
+    font-size: 1.281em;
+  }
+
+  .more-jobs, .more-jobs svg {
+    height: 1.281em;
+  }
+}
+
+@media (min-width: 768px) {
+  #jobs {
+    padding-bottom: 80px;
+  }
+
+  .jobs-wrapper {
+    margin: 0 30px;
+  }
+
+  .job-cat {
+    font-size: 2.25em;
+  }
+
+  .jobs-list p {
+    font-size: 1.75em;
+  }
+
+  .more-jobs, .more-jobs svg {
+    height: 1.75em;
+  }
+}
+
+@media (min-width: 981px) {
+  .jobs-wrapper {
+    margin: 0 auto;
+  }
+}
+
 /* ################################ */
 /* ## FOOTER                     ## */
 /* ################################ */
