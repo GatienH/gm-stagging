@@ -281,3 +281,9 @@ function onWindowScroll(event) {
 }
 
 window.addEventListener('scroll', onWindowScroll)
+
+function displayJobs(e, list) {
+  document.querySelector(`#${list}`).classList.toggle('short-list');
+  e.querySelector('#dots').classList.toggle('hidden');
+  e.querySelector('#arrow').classList.toggle('hidden');
+}
