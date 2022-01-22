@@ -17,22 +17,22 @@ class HeaderBar extends HTMLElement {
 
       const pages = [
         ['home',
-          ['index.html', 'Accueil'], ['index.html', 'Home page']
+          ['index.html', 'Accueil'], ['index.html', 'Home']
         ],
         ['about',
-          ['a-propos.html', 'À propos'], ['who-am-i.html', 'Who am I?']
+          ['a-propos.html', 'À propos'], ['about-us.html', 'About us']
         ],
         ['recruitment',
-          ['recrutement.html', 'Recrutement'], ['page3_en.html', 'Page 3 EN']
+          ['recrutement.html', 'Recrutement'], ['recruitment.html', 'Recruitment']
         ],
         ['consulting',
-          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['page4_en.html', 'Page 4 EN']
+          ['conseil-et-mission-integree.html', 'Conseil & Mission intégrée'], ['strategic-people-consulting-firm.html', 'Recruitment consulting firm']
         ],
-        // ['clients',
-        //   ['nos-clients.html', 'Nos clients'], ['page5_en.html', 'Page 5 EN']
-        // ],
+        ['clients',
+          ['nos-clients.html', 'Nos clients'], ['our-clients.html', 'Our clients']
+        ],
         ['terms',
-          ['', ''], ['contact.html', 'Contact us']
+          ['mentions-legales.html', ''], ['terms-of-use.html', '']
         ]
       ];
 
@@ -56,8 +56,8 @@ class HeaderBar extends HTMLElement {
     // add menu to nav to header & lgToggle to header to body
     nav.appendChild(menu);
 
-    // uncomment for lg toggle
     // header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
+    header.querySelector("#header .right-items").prepend(lgToggleLinks);
 
     header.querySelector("#header").appendChild(nav);
     document.body.prepend(header);
@@ -93,7 +93,7 @@ class HeaderBar extends HTMLElement {
     const brand = document.createElement('div');
     const rightItems = document.createElement('div');
 
-    // uncomment for lg toggle
+    
     // const lgToggle = document.createElement('div');
 
     const burger = document.createElement('div');
@@ -107,7 +107,7 @@ class HeaderBar extends HTMLElement {
     brand.setAttribute('id', 'brand');
     rightItems.setAttribute('class', 'right-items');
 
-    // uncomment for lg toggle
+    
     // lgToggle.setAttribute('class', 'lg-toggle');
 
     burger.setAttribute('id', 'burger');
@@ -149,11 +149,9 @@ class HeaderBar extends HTMLElement {
     headerDiv.appendChild(leftItems);
     leftItems.appendChild(brand);
     headerDiv.appendChild(rightItems);
-    rightItems.appendChild(burger);
-
-    // uncomment for lg toggle
     // rightItems.appendChild(lgToggle);
-
+    rightItems.appendChild(burger);
+    
     return header;
   }
 
@@ -199,7 +197,11 @@ class HeaderBar extends HTMLElement {
   }
 
   setLgToggle(lg, page, lgs, pages) {
+
+    // header.querySelector("#header .right-items .lg-toggle").appendChild(lgToggleLinks);
+
     const lgToggleElmt = document.createElement('div');
+    lgToggleElmt.setAttribute('id', 'lg-toggle');
     let lgToggleLink;
 
     lgs.forEach( e => {
@@ -215,13 +217,14 @@ class HeaderBar extends HTMLElement {
       lgToggleLink.textContent = e.toUpperCase();
       lgToggleElmt.appendChild(lgToggleLink);
 
-      if (lgs.length > 1 && (lgs.indexOf(e) < lgs.length - 1) ) {
-        let lgToggleSep = document.createElement('span');
-        lgToggleSep.textContent = ' | ';
-        lgToggleElmt.appendChild(lgToggleSep);
-      }
+      // if (lgs.length > 1 && (lgs.indexOf(e) < lgs.length - 1) ) {
+      //   let lgToggleSep = document.createElement('span');
+      //   lgToggleSep.setAttribute('class', 'sep');
+      //   lgToggleSep.textContent = '|';
+      //   lgToggleElmt.appendChild(lgToggleSep);
+      // }
     });
-
+    
     return lgToggleElmt;
   }
 
