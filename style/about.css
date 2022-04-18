@@ -105,17 +105,9 @@
   .pic-left img {
     margin-right: 66px;
   }
-  
+
   .pic-right p, .pic-left p {
-    margin-bottom: 1.313em;
-  }
-
-  .pic-right p {
-    margin-left: 30px;
-  }
-
-  .pic-left p {
-    margin-right: 30px;
+    margin: 0 30px 1.313em 30px;
   }
 }
 
